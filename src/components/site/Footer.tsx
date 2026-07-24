@@ -10,7 +10,14 @@ export function Footer() {
         <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <img src={logoSymbol.url} alt="" className="h-12 w-12 object-contain" style={{ filter: "brightness(1.15)" }} />
+              <img
+                src={logoSymbol.url}
+                alt=""
+                className="h-12 w-12 object-contain"
+                style={{ filter: "brightness(1.15)" }}
+                loading="lazy"
+                decoding="async"
+              />
               <div className="leading-tight">
                 <div className="font-serif text-2xl">{site.name}</div>
                 <div className="text-[11px] uppercase tracking-[0.24em] text-[color:var(--sand)]">

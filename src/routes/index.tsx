@@ -16,6 +16,7 @@ export const Route = createFileRoute("/")({
       description:
         "Projeto regenerativo nos Marins, Serra da Mantiqueira. Experiências, estadias e saberes que aproximam pessoas da natureza.",
       image: picoMarins.url,
+      preloadImage: picoMarins.url,
     }),
   component: HomePage,
 });
@@ -29,6 +30,8 @@ function HomePage() {
           src={picoMarins.url}
           alt="Pico dos Marins visto do território da Clareira"
           className="absolute inset-0 h-full w-full object-cover"
+          fetchPriority="high"
+          decoding="async"
         />
         {/* Top gradient for header/logo/kicker readability */}
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-black/45 via-[color:var(--forest)]/25 to-transparent pointer-events-none" />
@@ -90,6 +93,8 @@ function HomePage() {
               src={marina1.url}
               alt="Marina no portão de madeira com a Serra da Mantiqueira ao fundo"
               className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div>

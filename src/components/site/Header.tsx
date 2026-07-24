@@ -38,6 +38,7 @@ export function Header() {
             alt={site.name}
             className="h-11 sm:h-12 w-auto shrink-0 object-contain"
             style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.35))" }}
+            decoding="async"
           />
         </Link>
 

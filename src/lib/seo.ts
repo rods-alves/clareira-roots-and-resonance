@@ -7,11 +7,13 @@ type SeoOptions = {
   path: string;
   /** Root-relative asset URL (from an *.asset.json import), e.g. picoMarins.url. */
   image?: string;
+  /** Root-relative URL of this page's LCP image, preloaded for a faster paint. */
+  preloadImage?: string;
 };
 
 const defaultOgImage = "/__l5e/assets-v1/3b3cd2a9-8c6b-4674-bbd1-c114b3244428/pico-marins.jpeg";
 
-export function seoHead({ title, description, path, image }: SeoOptions) {
+export function seoHead({ title, description, path, image, preloadImage }: SeoOptions) {
   const url = path === "/" ? site.url : `${site.url}${path}`;
   const imageUrl = `${site.url}${image ?? defaultOgImage}`;
 
@@ -27,6 +29,9 @@ export function seoHead({ title, description, path, image }: SeoOptions) {
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageUrl },
     ],
-    links: [{ rel: "canonical", href: url }],
+    links: [
+      { rel: "canonical", href: url },
+      ...(preloadImage ? [{ rel: "preload", as: "image", href: preloadImage } as const] : []),
+    ],
   };
 }

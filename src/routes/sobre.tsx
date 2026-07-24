@@ -70,7 +70,13 @@ function SobrePage() {
         <div className="px-6 sm:px-10 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl grid gap-14 md:grid-cols-2 md:gap-20 items-center">
             <div className="relative aspect-[5/4] overflow-hidden rounded-sm">
-              <img src={picoMarins.url} alt="Pico dos Marins" className="absolute inset-0 h-full w-full object-cover" />
+              <img
+                src={picoMarins.url}
+                alt="Pico dos Marins"
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div>
               <div className="text-[11px] uppercase tracking-[0.32em] text-[color:var(--tan)]">
@@ -151,7 +157,13 @@ function SobrePage() {
 
             <div className="mt-16 grid gap-14 md:grid-cols-[1.1fr_1fr] items-center">
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={marina3.url} alt="Marina no território" className="absolute inset-0 h-full w-full object-cover" />
+                <img
+                  src={marina3.url}
+                  alt="Marina no território"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div>
                 <h3 className="font-serif text-3xl sm:text-4xl">Marina</h3>
@@ -177,7 +189,13 @@ function SobrePage() {
             <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[marina2, marina4].map((img, i) => (
                 <div key={i} className="relative aspect-square overflow-hidden rounded-sm">
-                  <img src={img.url} alt="Marina no território dos Marins" className="absolute inset-0 h-full w-full object-cover" />
+                  <img
+                    src={img.url}
+                    alt="Marina no território dos Marins"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               ))}
               <div className="hidden sm:flex items-center justify-center bg-[color:var(--forest)] border border-[color:var(--olive)]/30 rounded-sm p-6 text-center">

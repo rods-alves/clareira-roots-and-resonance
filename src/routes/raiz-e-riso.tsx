@@ -30,6 +30,7 @@ export const Route = createFileRoute("/raiz-e-riso")({
       description:
         "Raiz & Riso é uma vivência da Clareira nos Sítios Guetahe e Nawera, nos Marins, Piquete-SP. Explorar, perceber, sentir.",
       image: rrBadge.url,
+      preloadImage: rrBadge.url,
     }),
   component: RaizERiso,
 });
@@ -138,6 +139,8 @@ function RaizERiso() {
               alt="Selo Raiz & Riso — Marins, Piquete-SP"
               className="mx-auto w-56 sm:w-72 md:w-80"
               style={{ filter: "drop-shadow(0 8px 24px rgba(74,93,58,0.18))" }}
+              fetchPriority="high"
+              decoding="async"
             />
             <div
               className="mt-10 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.32em]"
@@ -203,6 +206,8 @@ function RaizERiso() {
                 src={marina1.url}
                 alt="Marina no portão de madeira, com a Serra da Mantiqueira ao fundo"
                 className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 className="absolute inset-0 pointer-events-none"
@@ -311,6 +316,8 @@ function RaizERiso() {
                   src={marina3.url}
                   alt="Marina, anfitriã do Raiz & Riso"
                   className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div>
@@ -345,6 +352,8 @@ function RaizERiso() {
                 src={marina4.url}
                 alt="Vista da Serra da Mantiqueira a partir do território"
                 className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
