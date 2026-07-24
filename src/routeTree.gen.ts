@@ -9,8 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as RaizERisoRouteImport } from './routes/raiz-e-riso'
+import { Route as NewsletterRouteImport } from './routes/newsletter'
+import { Route as EmBreveRouteImport } from './routes/em-breve'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RaizERisoRoute = RaizERisoRouteImport.update({
+  id: '/raiz-e-riso',
+  path: '/raiz-e-riso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsletterRoute = NewsletterRouteImport.update({
+  id: '/newsletter',
+  path: '/newsletter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmBreveRoute = EmBreveRouteImport.update({
+  id: '/em-breve',
+  path: '/em-breve',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +49,96 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/em-breve': typeof EmBreveRoute
+  '/newsletter': typeof NewsletterRoute
+  '/raiz-e-riso': typeof RaizERisoRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/em-breve': typeof EmBreveRoute
+  '/newsletter': typeof NewsletterRoute
+  '/raiz-e-riso': typeof RaizERisoRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
+  '/em-breve': typeof EmBreveRoute
+  '/newsletter': typeof NewsletterRoute
+  '/raiz-e-riso': typeof RaizERisoRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contato'
+    | '/em-breve'
+    | '/newsletter'
+    | '/raiz-e-riso'
+    | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/contato' | '/em-breve' | '/newsletter' | '/raiz-e-riso' | '/sobre'
+  id:
+    | '__root__'
+    | '/'
+    | '/contato'
+    | '/em-breve'
+    | '/newsletter'
+    | '/raiz-e-riso'
+    | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
+  EmBreveRoute: typeof EmBreveRoute
+  NewsletterRoute: typeof NewsletterRoute
+  RaizERisoRoute: typeof RaizERisoRoute
+  SobreRoute: typeof SobreRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/raiz-e-riso': {
+      id: '/raiz-e-riso'
+      path: '/raiz-e-riso'
+      fullPath: '/raiz-e-riso'
+      preLoaderRoute: typeof RaizERisoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/newsletter': {
+      id: '/newsletter'
+      path: '/newsletter'
+      fullPath: '/newsletter'
+      preLoaderRoute: typeof NewsletterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/em-breve': {
+      id: '/em-breve'
+      path: '/em-breve'
+      fullPath: '/em-breve'
+      preLoaderRoute: typeof EmBreveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +151,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
+  EmBreveRoute: EmBreveRoute,
+  NewsletterRoute: NewsletterRoute,
+  RaizERisoRoute: RaizERisoRoute,
+  SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
