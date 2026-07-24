@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoSymbol from "@/assets/logo-symbol.asset.json";
+import logoHorizontal from "@/assets/clareira-logo-horizontal.svg.asset.json";
 import { nav, site } from "@/lib/site-data";
 
 export function Header() {
@@ -28,27 +28,35 @@ export function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-background/85 backdrop-blur-md border-b border-border/60"
-          : "bg-transparent"
+          : "bg-[color:var(--forest)]/35 backdrop-blur-sm"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
         <Link to="/" className="flex items-center gap-3 min-w-0" onClick={() => setOpen(false)}>
-          <img src={logoSymbol.url} alt="" className="h-10 w-10 shrink-0 object-contain" />
-          <span className="hidden sm:flex flex-col leading-tight min-w-0">
-            <span className="font-serif text-xl text-primary truncate">{site.name}</span>
-            <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground truncate">
-              experiências no território
-            </span>
-          </span>
+          <img
+            src={logoHorizontal.url}
+            alt={site.name}
+            className="h-11 sm:h-12 w-auto shrink-0 object-contain"
+            style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.35))" }}
+          />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav
+          className={`hidden lg:flex items-center gap-1 ${
+            scrolled ? "" : "text-[color:var(--cream)]"
+          }`}
+          style={scrolled ? undefined : { textShadow: "0 1px 3px rgba(0,0,0,0.45)" }}
+        >
           {nav.map((item) => (
             <div key={item.label} className="relative group">
               <Link
                 to={item.to}
-                className="inline-flex items-center gap-1 px-3 py-2 text-sm text-primary/80 hover:text-primary transition-colors"
-                activeProps={{ className: "text-primary font-medium" }}
+                className={`inline-flex items-center gap-1 px-3 py-2 text-sm transition-colors ${
+                  scrolled
+                    ? "text-primary/80 hover:text-primary"
+                    : "text-[color:var(--cream)] hover:text-white"
+                }`}
+                activeProps={{ className: "font-medium" }}
                 activeOptions={{ exact: item.to === "/" }}
               >
                 {item.label}
@@ -77,7 +85,11 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-primary"
+          className={`lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
+            scrolled
+              ? "border-border text-primary"
+              : "border-white/40 text-[color:var(--cream)]"
+          }`}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

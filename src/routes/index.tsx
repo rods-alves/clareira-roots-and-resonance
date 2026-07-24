@@ -3,7 +3,7 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { NewsletterInline } from "@/components/site/NewsletterInline";
 import picoMarins from "@/assets/pico-marins.asset.json";
-import logoStacked from "@/assets/logo-stacked.asset.json";
+import logoStacked from "@/assets/clareira-logo-vertical.svg.asset.json";
 import marina1 from "@/assets/marina-1.asset.json";
 import { emBreve, manifesto, site } from "@/lib/site-data";
 
@@ -36,18 +36,24 @@ function HomePage() {
           alt="Pico dos Marins visto do território da Clareira"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--forest)]/40 via-[color:var(--forest)]/10 to-[color:var(--forest)]/85" />
+        {/* Top gradient for header/logo/kicker readability */}
+        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-black/45 via-[color:var(--forest)]/25 to-transparent pointer-events-none" />
+        {/* Base gradient for bottom copy */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[color:var(--forest)]/10 to-[color:var(--forest)]/85" />
 
         <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 pb-16 sm:pb-24 pt-40">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-[color:var(--sand)] text-[11px] uppercase tracking-[0.32em]">
+            <div
+              className="inline-flex items-center gap-2 text-[color:var(--cream)] text-xs sm:text-[13px] font-semibold uppercase tracking-[0.36em]"
+              style={{ textShadow: "0 2px 8px rgba(0,0,0,0.55)" }}
+            >
               <MapPin className="h-3.5 w-3.5" /> {site.location}
             </div>
             <img
               src={logoStacked.url}
               alt="Clareira — experiências enraizadas no território"
-              className="mt-8 w-56 sm:w-72 md:w-80 drop-shadow-xl"
-              style={{ filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.35))" }}
+              className="mt-10 w-64 sm:w-80 md:w-96"
+              style={{ filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.4))" }}
             />
             <p className="mt-10 max-w-xl font-serif italic text-2xl sm:text-3xl leading-[1.35] text-[color:var(--cream)]">
               Uma pausa dentro da mata. Um lugar onde a luz alcança o chão e algo novo pode brotar.
