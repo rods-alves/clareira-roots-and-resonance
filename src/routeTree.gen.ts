@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as RaizERisoRouteImport } from './routes/raiz-e-riso'
+import { Route as EmBreveRouteImport } from './routes/em-breve'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SobreRoute = SobreRouteImport.update({
@@ -23,6 +24,11 @@ const RaizERisoRoute = RaizERisoRouteImport.update({
   path: '/raiz-e-riso',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EmBreveRoute = EmBreveRouteImport.update({
+  id: '/em-breve',
+  path: '/em-breve',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/em-breve': typeof EmBreveRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/em-breve': typeof EmBreveRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/em-breve': typeof EmBreveRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/raiz-e-riso' | '/sobre'
+  fullPaths: '/' | '/em-breve' | '/raiz-e-riso' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/raiz-e-riso' | '/sobre'
-  id: '__root__' | '/' | '/raiz-e-riso' | '/sobre'
+  to: '/' | '/em-breve' | '/raiz-e-riso' | '/sobre'
+  id: '__root__' | '/' | '/em-breve' | '/raiz-e-riso' | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EmBreveRoute: typeof EmBreveRoute
   RaizERisoRoute: typeof RaizERisoRoute
   SobreRoute: typeof SobreRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RaizERisoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/em-breve': {
+      id: '/em-breve'
+      path: '/em-breve'
+      fullPath: '/em-breve'
+      preLoaderRoute: typeof EmBreveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EmBreveRoute: EmBreveRoute,
   RaizERisoRoute: RaizERisoRoute,
   SobreRoute: SobreRoute,
 }
