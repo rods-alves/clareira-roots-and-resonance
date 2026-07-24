@@ -9,8 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RaizERisoRouteImport } from './routes/raiz-e-riso'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RaizERisoRoute = RaizERisoRouteImport.update({
+  id: '/raiz-e-riso',
+  path: '/raiz-e-riso',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +25,39 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/raiz-e-riso': typeof RaizERisoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/raiz-e-riso': typeof RaizERisoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/raiz-e-riso': typeof RaizERisoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/raiz-e-riso'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/raiz-e-riso'
+  id: '__root__' | '/' | '/raiz-e-riso'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  RaizERisoRoute: typeof RaizERisoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/raiz-e-riso': {
+      id: '/raiz-e-riso'
+      path: '/raiz-e-riso'
+      fullPath: '/raiz-e-riso'
+      preLoaderRoute: typeof RaizERisoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  RaizERisoRoute: RaizERisoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
