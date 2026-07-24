@@ -165,3 +165,48 @@
   height: 1px;
   background: linear-gradient(to right, transparent, var(--tan), transparent);
 }
+
+/* ============ Raiz & Riso — scoped theme ============ */
+.rr-theme {
+  /* Paleta específica R&R */
+  --rr-sage: #9CAF88;
+  --rr-moss: #4A5D3A;
+  --rr-terracotta: #B8593E;
+  --rr-sand: #DDCBAA;
+  --rr-cream: #F1EADC;
+  --rr-rust: #A0522D;
+  --rr-mustard: #C99A2E;
+  --rr-leather: #6B4423;
+  --rr-deep-blue: #2C3E5C;
+
+  background-color: var(--rr-cream);
+  color: var(--rr-moss);
+}
+
+.rr-theme .rr-heading {
+  color: var(--rr-moss);
+}
+
+.rr-theme .rr-kicker {
+  color: var(--rr-rust);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@utility kraft-texture {
+  background-color: #f1eadc;
+  background-image:
+    radial-gradient(rgba(107, 68, 35, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(74, 93, 58, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(221, 203, 170, 0.15), transparent 40%);
+  background-size: 28px 28px, 44px 44px, 100% 100%;
+  background-position: 0 0, 14px 14px, 0 0;
+}
+
+@utility rr-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--rr-leather), transparent);
+  opacity: 0.5;
+}
