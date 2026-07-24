@@ -97,7 +97,7 @@ function RaizERiso() {
       <div className="rr-theme kraft-texture">
         {/* Scroll progress */}
         <div
-          className="fixed left-0 right-0 top-[72px] z-40 h-[2px] bg-transparent"
+          className="fixed left-0 right-0 top-[76px] sm:top-[88px] z-40 h-[2px] bg-transparent"
           aria-hidden
         >
           <div
@@ -108,7 +108,7 @@ function RaizERiso() {
 
         {/* Anchor mini-nav (sticky) */}
         <nav
-          className="sticky top-[70px] z-30 border-y backdrop-blur-md"
+          className="sticky top-[76px] sm:top-[88px] z-30 border-y backdrop-blur-md"
           style={{
             background: "color-mix(in oklab, var(--rr-cream) 88%, transparent)",
             borderColor: "color-mix(in oklab, var(--rr-leather) 25%, transparent)",
