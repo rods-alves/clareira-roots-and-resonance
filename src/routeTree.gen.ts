@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as RaizERisoRouteImport } from './routes/raiz-e-riso'
+import { Route as NewsletterRouteImport } from './routes/newsletter'
 import { Route as EmBreveRouteImport } from './routes/em-breve'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +23,11 @@ const SobreRoute = SobreRouteImport.update({
 const RaizERisoRoute = RaizERisoRouteImport.update({
   id: '/raiz-e-riso',
   path: '/raiz-e-riso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsletterRoute = NewsletterRouteImport.update({
+  id: '/newsletter',
+  path: '/newsletter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EmBreveRoute = EmBreveRouteImport.update({
@@ -38,12 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/em-breve': typeof EmBreveRoute
+  '/newsletter': typeof NewsletterRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/em-breve': typeof EmBreveRoute
+  '/newsletter': typeof NewsletterRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/sobre': typeof SobreRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/em-breve': typeof EmBreveRoute
+  '/newsletter': typeof NewsletterRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/em-breve' | '/raiz-e-riso' | '/sobre'
+  fullPaths: '/' | '/em-breve' | '/newsletter' | '/raiz-e-riso' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/em-breve' | '/raiz-e-riso' | '/sobre'
-  id: '__root__' | '/' | '/em-breve' | '/raiz-e-riso' | '/sobre'
+  to: '/' | '/em-breve' | '/newsletter' | '/raiz-e-riso' | '/sobre'
+  id: '__root__' | '/' | '/em-breve' | '/newsletter' | '/raiz-e-riso' | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EmBreveRoute: typeof EmBreveRoute
+  NewsletterRoute: typeof NewsletterRoute
   RaizERisoRoute: typeof RaizERisoRoute
   SobreRoute: typeof SobreRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/raiz-e-riso'
       fullPath: '/raiz-e-riso'
       preLoaderRoute: typeof RaizERisoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/newsletter': {
+      id: '/newsletter'
+      path: '/newsletter'
+      fullPath: '/newsletter'
+      preLoaderRoute: typeof NewsletterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/em-breve': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EmBreveRoute: EmBreveRoute,
+  NewsletterRoute: NewsletterRoute,
   RaizERisoRoute: RaizERisoRoute,
   SobreRoute: SobreRoute,
 }
