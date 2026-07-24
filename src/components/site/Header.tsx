@@ -59,19 +59,24 @@ export function Header() {
                 }`}
                 activeProps={{ className: "font-medium" }}
                 activeOptions={{ exact: item.to === "/" }}
+                aria-haspopup={item.children ? "menu" : undefined}
               >
                 {item.label}
                 {item.children && <ChevronDown className="h-3.5 w-3.5 opacity-60" />}
               </Link>
               {item.children && (
-                <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200">
+                <div
+                  role="menu"
+                  className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200"
+                >
                   <div className="min-w-[220px] rounded-md border border-border bg-background/95 backdrop-blur-md shadow-lg py-2">
                     {item.children.map((c) => (
                       <Link
                         key={c.label}
                         to={c.to}
                         hash={c.hash}
-                        className="block px-4 py-2 text-sm text-primary/80 hover:text-primary hover:bg-secondary/60 transition-colors"
+                        role="menuitem"
+                        className="block px-4 py-2 text-sm text-primary/80 hover:text-primary hover:bg-secondary/60 focus-visible:bg-secondary/60 focus-visible:outline-none transition-colors"
                       >
                         {c.label}
                       </Link>
