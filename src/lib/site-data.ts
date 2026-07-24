@@ -3,8 +3,8 @@ export const site = {
   tagline: "experiências enraizadas no território",
   location: "Marins · Serra da Mantiqueira · Piquete-SP",
   email: "ola@clareira.eco",
-  whatsapp: "+55 12 99999-0000",
-  whatsappHref: "https://wa.me/5512999990000",
+  whatsapp: "+55 31 99822-5916",
+  whatsappHref: "https://wa.me/5531998225916",
   instagram: "https://instagram.com/clareira.eco",
   instagramHandle: "@clareira.eco",
   // Domínio público atual (preview do Lovable). Atualizar para o domínio
@@ -121,8 +121,7 @@ export const raizRiso = {
     spotsLeft: "[vagas limitadas]",
   },
   cta: {
-    // placeholders — troque pelos links reais
-    signupHref: "https://wa.me/5512999990000?text=Quero%20me%20inscrever%20no%20Raiz%20e%20Riso",
+    signupHref: `${site.whatsappHref}?text=Quero%20me%20inscrever%20no%20Raiz%20e%20Riso`,
     waitlistHref: "/newsletter?interesse=raiz-e-riso",
   },
   incluso: [
