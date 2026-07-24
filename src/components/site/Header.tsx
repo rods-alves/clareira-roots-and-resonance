@@ -41,13 +41,22 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav
+          className={`hidden lg:flex items-center gap-1 ${
+            scrolled ? "" : "text-[color:var(--cream)]"
+          }`}
+          style={scrolled ? undefined : { textShadow: "0 1px 3px rgba(0,0,0,0.45)" }}
+        >
           {nav.map((item) => (
             <div key={item.label} className="relative group">
               <Link
                 to={item.to}
-                className="inline-flex items-center gap-1 px-3 py-2 text-sm text-primary/80 hover:text-primary transition-colors"
-                activeProps={{ className: "text-primary font-medium" }}
+                className={`inline-flex items-center gap-1 px-3 py-2 text-sm transition-colors ${
+                  scrolled
+                    ? "text-primary/80 hover:text-primary"
+                    : "text-[color:var(--cream)] hover:text-white"
+                }`}
+                activeProps={{ className: "font-medium" }}
                 activeOptions={{ exact: item.to === "/" }}
               >
                 {item.label}
@@ -76,7 +85,11 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-primary"
+          className={`lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
+            scrolled
+              ? "border-border text-primary"
+              : "border-white/40 text-[color:var(--cream)]"
+          }`}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
