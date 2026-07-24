@@ -2,20 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { NewsletterInline } from "@/components/site/NewsletterInline";
 import { emBreve } from "@/lib/site-data";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/em-breve")({
-  head: () => ({
-    meta: [
-      { title: "Em breve — Clareira" },
-      {
-        name: "description",
-        content:
-          "Quatro caminhos que se abrem a partir da Clareira: Mato Adentro, Estadias, Saberes digitais e Território local.",
-      },
-      { property: "og:title", content: "Em breve — Clareira" },
-      { property: "og:description", content: "Mato Adentro, Estadias, Saberes digitais e Território local." },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      path: "/em-breve",
+      title: "Em breve — Clareira",
+      description:
+        "Quatro caminhos que se abrem a partir da Clareira: Mato Adentro, Estadias, Saberes digitais e Território local.",
+    }),
   component: EmBrevePage,
 });
 

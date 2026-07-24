@@ -6,23 +6,17 @@ import picoMarins from "@/assets/pico-marins.asset.json";
 import logoStacked from "@/assets/clareira-logo-vertical.svg.asset.json";
 import marina1 from "@/assets/marina-1.asset.json";
 import { emBreve, manifesto, site } from "@/lib/site-data";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Clareira — experiências enraizadas no território" },
-      {
-        name: "description",
-        content:
-          "Projeto regenerativo nos Marins, Serra da Mantiqueira. Experiências, estadias e saberes que aproximam pessoas da natureza.",
-      },
-      { property: "og:title", content: "Clareira — experiências enraizadas no território" },
-      {
-        property: "og:description",
-        content: "Uma pausa dentro da mata, aos pés do Pico dos Marins.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      path: "/",
+      title: "Clareira — experiências enraizadas no território",
+      description:
+        "Projeto regenerativo nos Marins, Serra da Mantiqueira. Experiências, estadias e saberes que aproximam pessoas da natureza.",
+      image: picoMarins.url,
+    }),
   component: HomePage,
 });
 

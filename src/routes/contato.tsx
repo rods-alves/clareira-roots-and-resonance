@@ -3,19 +3,16 @@ import { useState, type FormEvent } from "react";
 import { Instagram, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { site } from "@/lib/site-data";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contato")({
-  head: () => ({
-    meta: [
-      { title: "Contato — Clareira" },
-      {
-        name: "description",
-        content: "Fale com a Clareira: e-mail, WhatsApp e Instagram. Estamos nos Marins, Serra da Mantiqueira.",
-      },
-      { property: "og:title", content: "Contato — Clareira" },
-      { property: "og:description", content: "Fale com a Clareira." },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      path: "/contato",
+      title: "Contato — Clareira",
+      description:
+        "Fale com a Clareira: e-mail, WhatsApp e Instagram. Estamos nos Marins, Serra da Mantiqueira.",
+    }),
   component: ContatoPage,
 });
 

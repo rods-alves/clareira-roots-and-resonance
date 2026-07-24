@@ -5,20 +5,17 @@ import marina2 from "@/assets/marina-2.asset.json";
 import marina3 from "@/assets/marina-3.asset.json";
 import marina4 from "@/assets/marina-4.asset.json";
 import { manifesto, regeneracao } from "@/lib/site-data";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/sobre")({
-  head: () => ({
-    meta: [
-      { title: "Sobre a Clareira — manifesto, território e quem conduz" },
-      {
-        name: "description",
-        content:
-          "Conheça o manifesto da Clareira, o território dos Marins, nossos princípios regenerativos e quem conduz o projeto.",
-      },
-      { property: "og:title", content: "Sobre a Clareira" },
-      { property: "og:description", content: "Manifesto, território, regeneração e quem conduz." },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      path: "/sobre",
+      title: "Sobre a Clareira — manifesto, território e quem conduz",
+      description:
+        "Conheça o manifesto da Clareira, o território dos Marins, nossos princípios regenerativos e quem conduz o projeto.",
+      image: picoMarins.url,
+    }),
   component: SobrePage,
 });
 

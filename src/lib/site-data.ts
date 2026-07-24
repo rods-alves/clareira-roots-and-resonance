@@ -7,6 +7,10 @@ export const site = {
   whatsappHref: "https://wa.me/5512999990000",
   instagram: "https://instagram.com/clareira.eco",
   instagramHandle: "@clareira.eco",
+  // Domínio público atual (preview do Lovable). Atualizar para o domínio
+  // definitivo (Hostinger) quando o site sair do Lovable — junto com
+  // public/sitemap.xml, que usa o mesmo host em URLs absolutas.
+  url: "https://id-preview--0c39c4b9-d49a-4a23-ba0e-770a80094a80.lovable.app",
 };
 
 export type NavItem = {

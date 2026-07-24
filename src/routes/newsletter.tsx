@@ -1,19 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { NewsletterInline } from "@/components/site/NewsletterInline";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/newsletter")({
-  head: () => ({
-    meta: [
-      { title: "Newsletter — Cartas da Clareira" },
-      {
-        name: "description",
-        content: "Assine as cartas ocasionais da Clareira e acompanhe o projeto no ritmo da montanha.",
-      },
-      { property: "og:title", content: "Cartas da Clareira" },
-      { property: "og:description", content: "Uma carta ocasional, com o ritmo da montanha." },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      path: "/newsletter",
+      title: "Newsletter — Cartas da Clareira",
+      description:
+        "Assine as cartas ocasionais da Clareira e acompanhe o projeto no ritmo da montanha.",
+    }),
   component: NewsletterPage,
 });
 

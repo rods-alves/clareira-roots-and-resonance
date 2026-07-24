@@ -16,41 +16,21 @@ import {
 } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { raizRiso } from "@/lib/site-data";
+import { seoHead } from "@/lib/seo";
 import rrBadge from "@/assets/raiz-riso-badge.jpg.asset.json";
 import marina1 from "@/assets/marina-1.asset.json";
 import marina3 from "@/assets/marina-3.asset.json";
 import marina4 from "@/assets/marina-4.asset.json";
 
 export const Route = createFileRoute("/raiz-e-riso")({
-  head: () => ({
-    meta: [
-      { title: "Raiz & Riso — vivência nos Marins · Clareira" },
-      {
-        name: "description",
-        content:
-          "Raiz & Riso é uma vivência da Clareira nos Sítios Guetahe e Nawera, nos Marins, Piquete-SP. Explorar, perceber, sentir.",
-      },
-      { property: "og:title", content: "Raiz & Riso — vivência nos Marins" },
-      {
-        property: "og:description",
-        content: "Uma vivência para explorar, perceber e sentir a Serra da Mantiqueira.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      {
-        property: "og:image",
-        content:
-          "https://id-preview--0c39c4b9-d49a-4a23-ba0e-770a80094a80.lovable.app" +
-          rrBadge.url,
-      },
-      {
-        name: "twitter:image",
-        content:
-          "https://id-preview--0c39c4b9-d49a-4a23-ba0e-770a80094a80.lovable.app" +
-          rrBadge.url,
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      path: "/raiz-e-riso",
+      title: "Raiz & Riso — vivência nos Marins · Clareira",
+      description:
+        "Raiz & Riso é uma vivência da Clareira nos Sítios Guetahe e Nawera, nos Marins, Piquete-SP. Explorar, perceber, sentir.",
+      image: rrBadge.url,
+    }),
   component: RaizERiso,
 });
 

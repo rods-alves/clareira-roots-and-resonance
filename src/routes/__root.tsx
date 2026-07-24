@@ -77,21 +77,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Clareira — experiências enraizadas no território" },
-      {
-        name: "description",
-        content:
-          "Clareira é um projeto regenerativo nos Marins, Serra da Mantiqueira. Experiências, estadias e saberes que aproximam pessoas da natureza e do território.",
-      },
       { name: "author", content: "Clareira" },
-      { property: "og:title", content: "Clareira — experiências enraizadas no território" },
-      {
-        property: "og:description",
-        content:
-          "Um projeto regenerativo na Serra da Mantiqueira. Experiências, estadias e saberes que aproximam pessoas da natureza.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "theme-color", content: "#1F3B2E" },
     ],
     links: [
       {
