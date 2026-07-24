@@ -38,40 +38,32 @@ function HomePage() {
         {/* Base gradient for bottom copy */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[color:var(--forest)]/10 to-[color:var(--forest)]/85" />
 
-        {/* Brand block: anchored top-left, just below the header */}
-        <div className="absolute inset-x-0 top-0 px-6 sm:px-10 pt-28 sm:pt-32">
-          <div className="mx-auto max-w-7xl">
-            <div className="max-w-2xl">
-              <div
-                className="inline-flex items-center gap-2 text-[color:var(--cream)] text-xs sm:text-[13px] font-semibold uppercase tracking-[0.36em]"
-                style={{ textShadow: "0 2px 8px rgba(0,0,0,0.55)" }}
-              >
-                <MapPin className="h-3.5 w-3.5" /> {site.location}
-              </div>
-              <img
-                src={logoStacked.url}
-                alt="Clareira — experiências enraizadas no território"
-                className="mt-6 w-56 sm:w-72 md:w-80"
-                style={{
-                  filter:
-                    "drop-shadow(0 10px 30px rgba(0,0,0,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.4))",
-                }}
-              />
+        {/* Content: logo close to the header, location below it, then the tagline */}
+        <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 pt-24 sm:pt-28">
+          <div className="max-w-2xl">
+            <img
+              src={logoStacked.url}
+              alt="Clareira — experiências enraizadas no território"
+              className="w-40 sm:w-52 md:w-60"
+              style={{
+                filter:
+                  "drop-shadow(0 10px 30px rgba(0,0,0,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.4))",
+              }}
+            />
+            <div
+              className="mt-6 inline-flex items-center gap-2 text-[color:var(--cream)] text-xs sm:text-[13px] font-semibold uppercase tracking-[0.36em]"
+              style={{ textShadow: "0 2px 8px rgba(0,0,0,0.55)" }}
+            >
+              <MapPin className="h-3.5 w-3.5" /> {site.location}
             </div>
-          </div>
-        </div>
-
-        {/* Bottom copy: tagline + scroll hint */}
-        <div className="absolute inset-x-0 bottom-0 px-6 sm:px-10 pb-16 sm:pb-24">
-          <div className="mx-auto max-w-7xl">
-            <p className="max-w-xl font-serif italic text-2xl sm:text-3xl leading-[1.35] text-[color:var(--cream)]">
+            <p className="mt-8 max-w-xl font-serif italic text-2xl sm:text-3xl leading-[1.35] text-[color:var(--cream)]">
               Uma pausa dentro da mata. Um lugar onde a luz alcança o chão e algo novo pode brotar.
             </p>
+          </div>
 
-            <div className="mt-14 flex items-center gap-6 text-[color:var(--cream)]/80 text-xs uppercase tracking-[0.28em]">
-              <span className="h-px w-16 bg-[color:var(--sand)]" />
-              role scroll para conhecer
-            </div>
+          <div className="mt-14 flex items-center gap-6 text-[color:var(--cream)]/80 text-xs uppercase tracking-[0.28em]">
+            <span className="h-px w-16 bg-[color:var(--sand)]" />
+            role scroll para conhecer
           </div>
         </div>
       </section>
