@@ -107,3 +107,35 @@ export const regeneracao = [
       "Respeitamos as estações, os ciclos e o tempo próprio do território. Nada aqui tem pressa — porque uma floresta não se planta em um trimestre.",
   },
 ];
+
+// ============ Raiz & Riso ============
+export const raizRiso = {
+  location: "Sítios Guetahe e Nawera · Marins · Piquete-SP",
+  guideMotto: "explorar, perceber, sentir.",
+  nextDate: {
+    label: "Próxima edição",
+    date: "[data a definir]",
+    duration: "3 dias · 2 noites",
+    price: "[valor sob consulta]",
+    spotsLeft: "[vagas limitadas]",
+  },
+  cta: {
+    // placeholders — troque pelos links reais
+    signupHref: "https://wa.me/5512999990000?text=Quero%20me%20inscrever%20no%20Raiz%20e%20Riso",
+    waitlistHref: "/newsletter?interesse=raiz-e-riso",
+  },
+  incluso: [
+    { icon: "tent", label: "Hospedagem em sítio nos Marins" },
+    { icon: "mug", label: "Refeições feitas com ingredientes locais" },
+    { icon: "boots", label: "Caminhadas guiadas pela Serra" },
+    { icon: "fire", label: "Rodas de fogo ao anoitecer" },
+    { icon: "fern", label: "Vivências de plantio e contato com a terra" },
+    { icon: "leaf", label: "Materiais de campo e diário da vivência" },
+  ],
+  paraQuem: [
+    "Quem quer uma pausa real do ritmo urbano.",
+    "Quem sente falta da natureza como parte da rotina, não como exceção.",
+    "Quem gosta de encontros pequenos, conversas verdadeiras e comida de verdade.",
+    "Quem topa se sujar um pouquinho — de terra, de café, de riso.",
+  ],
+};
