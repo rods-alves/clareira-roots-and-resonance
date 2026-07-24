@@ -25,7 +25,7 @@ function HomePage() {
   return (
     <PageShell>
       {/* Hero */}
-      <section className="relative min-h-[100vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[100vh] overflow-hidden">
         <img
           src={picoMarins.url}
           alt="Pico dos Marins visto do território da Clareira"
@@ -38,28 +38,40 @@ function HomePage() {
         {/* Base gradient for bottom copy */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[color:var(--forest)]/10 to-[color:var(--forest)]/85" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 pb-16 sm:pb-24 pt-40">
-          <div className="max-w-2xl">
-            <div
-              className="inline-flex items-center gap-2 text-[color:var(--cream)] text-xs sm:text-[13px] font-semibold uppercase tracking-[0.36em]"
-              style={{ textShadow: "0 2px 8px rgba(0,0,0,0.55)" }}
-            >
-              <MapPin className="h-3.5 w-3.5" /> {site.location}
+        {/* Brand block: anchored top-left, just below the header */}
+        <div className="absolute inset-x-0 top-0 px-6 sm:px-10 pt-28 sm:pt-32">
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-2xl">
+              <div
+                className="inline-flex items-center gap-2 text-[color:var(--cream)] text-xs sm:text-[13px] font-semibold uppercase tracking-[0.36em]"
+                style={{ textShadow: "0 2px 8px rgba(0,0,0,0.55)" }}
+              >
+                <MapPin className="h-3.5 w-3.5" /> {site.location}
+              </div>
+              <img
+                src={logoStacked.url}
+                alt="Clareira — experiências enraizadas no território"
+                className="mt-6 w-56 sm:w-72 md:w-80"
+                style={{
+                  filter:
+                    "drop-shadow(0 10px 30px rgba(0,0,0,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.4))",
+                }}
+              />
             </div>
-            <img
-              src={logoStacked.url}
-              alt="Clareira — experiências enraizadas no território"
-              className="mt-10 w-64 sm:w-80 md:w-96"
-              style={{ filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.4))" }}
-            />
-            <p className="mt-10 max-w-xl font-serif italic text-2xl sm:text-3xl leading-[1.35] text-[color:var(--cream)]">
+          </div>
+        </div>
+
+        {/* Bottom copy: tagline + scroll hint */}
+        <div className="absolute inset-x-0 bottom-0 px-6 sm:px-10 pb-16 sm:pb-24">
+          <div className="mx-auto max-w-7xl">
+            <p className="max-w-xl font-serif italic text-2xl sm:text-3xl leading-[1.35] text-[color:var(--cream)]">
               Uma pausa dentro da mata. Um lugar onde a luz alcança o chão e algo novo pode brotar.
             </p>
-          </div>
 
-          <div className="mt-14 flex items-center gap-6 text-[color:var(--cream)]/80 text-xs uppercase tracking-[0.28em]">
-            <span className="h-px w-16 bg-[color:var(--sand)]" />
-            role scroll para conhecer
+            <div className="mt-14 flex items-center gap-6 text-[color:var(--cream)]/80 text-xs uppercase tracking-[0.28em]">
+              <span className="h-px w-16 bg-[color:var(--sand)]" />
+              role scroll para conhecer
+            </div>
           </div>
         </div>
       </section>
@@ -105,13 +117,13 @@ function HomePage() {
               Raiz &amp; Riso
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Nossa primeira vivência é um convite para se enraizar no território
-              e reencontrar o riso simples — o das refeições ao redor do fogo, das
-              caminhadas sem pressa, das conversas que só a montanha permite.
+              Nossa primeira vivência é um convite para se enraizar no território e reencontrar o
+              riso simples — o das refeições ao redor do fogo, das caminhadas sem pressa, das
+              conversas que só a montanha permite.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Estamos preparando as datas, a curadoria e o cuidado com cada detalhe.
-              Deixe seu e-mail e avisamos quando as inscrições abrirem.
+              Estamos preparando as datas, a curadoria e o cuidado com cada detalhe. Deixe seu
+              e-mail e avisamos quando as inscrições abrirem.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -155,9 +167,7 @@ function HomePage() {
                   0{i + 1} · {pilar.kicker}
                 </div>
                 <h3 className="mt-4 font-serif text-2xl text-primary">{pilar.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {pilar.body}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{pilar.body}</p>
               </article>
             ))}
           </div>
