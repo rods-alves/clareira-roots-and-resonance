@@ -151,8 +151,9 @@ function HomePage() {
 
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {emBreve.map((pilar, i) => (
-              <article
+              <Link
                 key={pilar.id}
+                to={pilar.to}
                 className="group flex flex-col border-t border-primary/25 pt-6"
               >
                 <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--olive)]">
@@ -160,18 +161,12 @@ function HomePage() {
                 </div>
                 <h3 className="mt-4 font-serif text-2xl text-primary">{pilar.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{pilar.body}</p>
-              </article>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm text-primary/70 group-hover:text-[color:var(--terra)] transition-colors">
+                  saiba mais
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
             ))}
-          </div>
-
-          <div className="mt-14">
-            <Link
-              to="/em-breve"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-[color:var(--terra)]"
-            >
-              Ver tudo que está por vir
-              <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>

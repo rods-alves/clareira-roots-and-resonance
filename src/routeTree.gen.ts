@@ -10,15 +10,25 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContatoRouteImport } from './routes/contato'
-import { Route as EmBreveRouteImport } from './routes/em-breve'
+import { Route as EstadiasRouteImport } from './routes/estadias'
+import { Route as MatoAdentroRouteImport } from './routes/mato-adentro'
 import { Route as NewsletterRouteImport } from './routes/newsletter'
 import { Route as RaizERisoRouteImport } from './routes/raiz-e-riso'
+import { Route as SaberesDigitaisRouteImport } from './routes/saberes-digitais'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as TerritorioLocalRouteImport } from './routes/territorio-local'
+import { Route as ExperienciasPersonalizadasRouteImport } from './routes/experiencias/personalizadas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -26,9 +36,14 @@ const ContatoRoute = ContatoRouteImport.update({
   path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EmBreveRoute = EmBreveRouteImport.update({
-  id: '/em-breve',
-  path: '/em-breve',
+const EstadiasRoute = EstadiasRouteImport.update({
+  id: '/estadias',
+  path: '/estadias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatoAdentroRoute = MatoAdentroRouteImport.update({
+  id: '/mato-adentro',
+  path: '/mato-adentro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NewsletterRoute = NewsletterRouteImport.update({
@@ -41,60 +56,122 @@ const RaizERisoRoute = RaizERisoRouteImport.update({
   path: '/raiz-e-riso',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SaberesDigitaisRoute = SaberesDigitaisRouteImport.update({
+  id: '/saberes-digitais',
+  path: '/saberes-digitais',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TerritorioLocalRoute = TerritorioLocalRouteImport.update({
+  id: '/territorio-local',
+  path: '/territorio-local',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienciasPersonalizadasRoute =
+  ExperienciasPersonalizadasRouteImport.update({
+    id: '/experiencias/personalizadas',
+    path: '/experiencias/personalizadas',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/contato': typeof ContatoRoute
-  '/em-breve': typeof EmBreveRoute
+  '/estadias': typeof EstadiasRoute
+  '/mato-adentro': typeof MatoAdentroRoute
   '/newsletter': typeof NewsletterRoute
   '/raiz-e-riso': typeof RaizERisoRoute
+  '/saberes-digitais': typeof SaberesDigitaisRoute
   '/sobre': typeof SobreRoute
+  '/territorio-local': typeof TerritorioLocalRoute
+  '/experiencias/personalizadas': typeof ExperienciasPersonalizadasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/contato': typeof ContatoRoute
-  '/em-breve': typeof EmBreveRoute
+  '/estadias': typeof EstadiasRoute
+  '/mato-adentro': typeof MatoAdentroRoute
   '/newsletter': typeof NewsletterRoute
   '/raiz-e-riso': typeof RaizERisoRoute
+  '/saberes-digitais': typeof SaberesDigitaisRoute
   '/sobre': typeof SobreRoute
+  '/territorio-local': typeof TerritorioLocalRoute
+  '/experiencias/personalizadas': typeof ExperienciasPersonalizadasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/contato': typeof ContatoRoute
-  '/em-breve': typeof EmBreveRoute
+  '/estadias': typeof EstadiasRoute
+  '/mato-adentro': typeof MatoAdentroRoute
   '/newsletter': typeof NewsletterRoute
   '/raiz-e-riso': typeof RaizERisoRoute
+  '/saberes-digitais': typeof SaberesDigitaisRoute
   '/sobre': typeof SobreRoute
+  '/territorio-local': typeof TerritorioLocalRoute
+  '/experiencias/personalizadas': typeof ExperienciasPersonalizadasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/contato' | '/em-breve' | '/newsletter' | '/raiz-e-riso' | '/sobre'
+    | '/'
+    | '/blog'
+    | '/contato'
+    | '/estadias'
+    | '/mato-adentro'
+    | '/newsletter'
+    | '/raiz-e-riso'
+    | '/saberes-digitais'
+    | '/sobre'
+    | '/territorio-local'
+    | '/experiencias/personalizadas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contato' | '/em-breve' | '/newsletter' | '/raiz-e-riso' | '/sobre'
+  to:
+    | '/'
+    | '/blog'
+    | '/contato'
+    | '/estadias'
+    | '/mato-adentro'
+    | '/newsletter'
+    | '/raiz-e-riso'
+    | '/saberes-digitais'
+    | '/sobre'
+    | '/territorio-local'
+    | '/experiencias/personalizadas'
   id:
     | '__root__'
     | '/'
+    | '/blog'
     | '/contato'
-    | '/em-breve'
+    | '/estadias'
+    | '/mato-adentro'
     | '/newsletter'
     | '/raiz-e-riso'
+    | '/saberes-digitais'
     | '/sobre'
+    | '/territorio-local'
+    | '/experiencias/personalizadas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRoute
   ContatoRoute: typeof ContatoRoute
-  EmBreveRoute: typeof EmBreveRoute
+  EstadiasRoute: typeof EstadiasRoute
+  MatoAdentroRoute: typeof MatoAdentroRoute
   NewsletterRoute: typeof NewsletterRoute
   RaizERisoRoute: typeof RaizERisoRoute
+  SaberesDigitaisRoute: typeof SaberesDigitaisRoute
   SobreRoute: typeof SobreRoute
+  TerritorioLocalRoute: typeof TerritorioLocalRoute
+  ExperienciasPersonalizadasRoute: typeof ExperienciasPersonalizadasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -106,6 +183,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contato': {
       id: '/contato'
       path: '/contato'
@@ -113,11 +197,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/em-breve': {
-      id: '/em-breve'
-      path: '/em-breve'
-      fullPath: '/em-breve'
-      preLoaderRoute: typeof EmBreveRouteImport
+    '/estadias': {
+      id: '/estadias'
+      path: '/estadias'
+      fullPath: '/estadias'
+      preLoaderRoute: typeof EstadiasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mato-adentro': {
+      id: '/mato-adentro'
+      path: '/mato-adentro'
+      fullPath: '/mato-adentro'
+      preLoaderRoute: typeof MatoAdentroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/newsletter': {
@@ -134,6 +225,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RaizERisoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/saberes-digitais': {
+      id: '/saberes-digitais'
+      path: '/saberes-digitais'
+      fullPath: '/saberes-digitais'
+      preLoaderRoute: typeof SaberesDigitaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sobre': {
       id: '/sobre'
       path: '/sobre'
@@ -141,16 +239,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/territorio-local': {
+      id: '/territorio-local'
+      path: '/territorio-local'
+      fullPath: '/territorio-local'
+      preLoaderRoute: typeof TerritorioLocalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiencias/personalizadas': {
+      id: '/experiencias/personalizadas'
+      path: '/experiencias/personalizadas'
+      fullPath: '/experiencias/personalizadas'
+      preLoaderRoute: typeof ExperienciasPersonalizadasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRoute,
   ContatoRoute: ContatoRoute,
-  EmBreveRoute: EmBreveRoute,
+  EstadiasRoute: EstadiasRoute,
+  MatoAdentroRoute: MatoAdentroRoute,
   NewsletterRoute: NewsletterRoute,
   RaizERisoRoute: RaizERisoRoute,
+  SaberesDigitaisRoute: SaberesDigitaisRoute,
   SobreRoute: SobreRoute,
+  TerritorioLocalRoute: TerritorioLocalRoute,
+  ExperienciasPersonalizadasRoute: ExperienciasPersonalizadasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

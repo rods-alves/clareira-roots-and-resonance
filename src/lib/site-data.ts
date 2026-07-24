@@ -22,7 +22,6 @@ export type NavItem = {
 
 export const nav: NavItem[] = [
   { label: "Início", to: "/" },
-  { label: "Raiz & Riso", to: "/raiz-e-riso" },
   {
     label: "Sobre a Clareira",
     to: "/sobre",
@@ -34,16 +33,18 @@ export const nav: NavItem[] = [
     ],
   },
   {
-    label: "Em breve",
-    to: "/em-breve",
+    label: "Experiências",
+    to: "/raiz-e-riso",
     children: [
-      { label: "Mato Adentro", to: "/em-breve", hash: "mato-adentro" },
-      { label: "Estadias", to: "/em-breve", hash: "estadias" },
-      { label: "Saberes digitais", to: "/em-breve", hash: "saberes" },
-      { label: "Território local", to: "/em-breve", hash: "territorio-local" },
+      { label: "Raiz & Riso", to: "/raiz-e-riso" },
+      { label: "Mato Adentro (Em breve)", to: "/mato-adentro" },
+      { label: "Estadias (Em breve)", to: "/estadias" },
+      { label: "Saberes digitais (Em breve)", to: "/saberes-digitais" },
+      { label: "Território local (Em breve)", to: "/territorio-local" },
+      { label: "Experiências personalizadas", to: "/experiencias/personalizadas" },
     ],
   },
-  { label: "Newsletter", to: "/newsletter" },
+  { label: "Blog", to: "/blog" },
   { label: "Contato", to: "/contato" },
 ];
 
@@ -61,54 +62,50 @@ export const manifesto = {
 export const emBreve = [
   {
     id: "mato-adentro",
+    to: "/mato-adentro",
     title: "Mato Adentro",
     kicker: "trilhas & imersões guiadas",
-    body:
-      "Caminhadas contemplativas pela Serra da Mantiqueira, imersões silenciosas na floresta e travessias até o Pico dos Marins conduzidas por quem vive o território.",
+    body: "Caminhadas contemplativas pela Serra da Mantiqueira, imersões silenciosas na floresta e travessias até o Pico dos Marins conduzidas por quem vive o território.",
   },
   {
     id: "estadias",
+    to: "/estadias",
     title: "Estadias",
     kicker: "hospedagem enraizada",
-    body:
-      "Um punhado de acomodações simples e cuidadas, feitas com materiais locais, para dormir com o silêncio da montanha e acordar com o canto dos pássaros.",
+    body: "Um punhado de acomodações simples e cuidadas, feitas com materiais locais, para dormir com o silêncio da montanha e acordar com o canto dos pássaros.",
   },
   {
     id: "saberes",
+    to: "/saberes-digitais",
     title: "Saberes digitais",
     kicker: "cursos & cadernos de campo",
-    body:
-      "Materiais editoriais, cursos online e cadernos de campo digitais para levar o que se aprende em Clareira para dentro do cotidiano — onde quer que ele aconteça.",
+    body: "Materiais editoriais, cursos online e cadernos de campo digitais para levar o que se aprende em Clareira para dentro do cotidiano — onde quer que ele aconteça.",
   },
   {
     id: "territorio-local",
+    to: "/territorio-local",
     title: "Território local",
     kicker: "rede de artesãos & produtores",
-    body:
-      "Uma curadoria de produtores, artesãos e agricultores da região dos Marins — um mapa vivo para quem quer atravessar o território de maneira mais próxima e justa.",
+    body: "Uma curadoria de produtores, artesãos e agricultores da região dos Marins — um mapa vivo para quem quer atravessar o território de maneira mais próxima e justa.",
   },
 ];
 
 export const regeneracao = [
   {
     title: "Escutar antes de intervir",
-    body:
-      "Cada gesto parte da observação paciente do lugar — do solo, das águas, das pessoas que já habitam este território há gerações.",
+    body: "Cada gesto parte da observação paciente do lugar — do solo, das águas, das pessoas que já habitam este território há gerações.",
   },
   {
     title: "Devolver mais do que se retira",
-    body:
-      "Regenerar é deixar o solo mais fértil, a água mais limpa e a comunidade mais forte do que quando chegamos. É a métrica que nos guia.",
+    body: "Regenerar é deixar o solo mais fértil, a água mais limpa e a comunidade mais forte do que quando chegamos. É a métrica que nos guia.",
   },
   {
     title: "Trabalhar em rede",
-    body:
-      "Costuramos parcerias com moradores, agricultores, artesãos e pesquisadores. A Clareira só existe porque outros já cuidam deste chão há muito tempo.",
+    body: "Costuramos parcerias com moradores, agricultores, artesãos e pesquisadores. A Clareira só existe porque outros já cuidam deste chão há muito tempo.",
   },
   {
     title: "Ritmo da natureza",
-    body:
-      "Respeitamos as estações, os ciclos e o tempo próprio do território. Nada aqui tem pressa — porque uma floresta não se planta em um trimestre.",
+    body: "Respeitamos as estações, os ciclos e o tempo próprio do território. Nada aqui tem pressa — porque uma floresta não se planta em um trimestre.",
   },
 ];
 
