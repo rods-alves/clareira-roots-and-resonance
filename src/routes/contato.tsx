@@ -79,7 +79,7 @@ function ContatoPage() {
               {sent ? "Mensagem enviada" : "Enviar"} <Send className="h-4 w-4" />
             </button>
             {sent && (
-              <p className="text-sm text-[color:var(--olive)]">
+              <p className="text-sm text-[color:var(--olive)]" role="status" aria-live="polite">
                 Obrigado, {form.nome || "amigo"}. Recebemos sua mensagem e retornamos em breve.
               </p>
             )}

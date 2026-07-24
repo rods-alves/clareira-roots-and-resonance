@@ -97,6 +97,8 @@ export function Header() {
               : "border-white/40 text-[color:var(--cream)]"
           }`}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -104,6 +106,7 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
+        id="mobile-menu"
         className={`lg:hidden fixed inset-0 top-[72px] bg-background transition-all duration-300 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}

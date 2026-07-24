@@ -59,7 +59,7 @@ export function NewsletterInline({ compact, title, description }: Props) {
         </button>
       </form>
       {done && (
-        <p className="mt-4 text-sm text-[color:var(--olive)]">
+        <p className="mt-4 text-sm text-[color:var(--olive)]" role="status" aria-live="polite">
           Obrigado. Em breve chega uma primeira carta com o cheiro da montanha.
         </p>
       )}
