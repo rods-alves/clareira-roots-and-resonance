@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -12,6 +13,8 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { WhatsAppFloatButton } from "../components/site/WhatsAppFloatButton";
+import { Footer } from "../components/site/Footer";
+import { NewsletterInline } from "../components/site/NewsletterInline";
 
 function NotFoundComponent() {
   return (
@@ -117,11 +120,25 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  // /newsletter already has its own native newsletter capture — skip the global
+  // block there so it isn't shown twice on that page.
+  const isNewsletterPage = pathname === "/newsletter";
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="min-h-screen flex flex-col">
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+        {!isNewsletterPage && (
+          <section className="px-6 sm:px-10 py-20 sm:py-28">
+            <div className="mx-auto max-w-4xl">
+              <NewsletterInline />
+            </div>
+          </section>
+        )}
+        <Footer />
+      </div>
       <WhatsAppFloatButton />
     </QueryClientProvider>
   );

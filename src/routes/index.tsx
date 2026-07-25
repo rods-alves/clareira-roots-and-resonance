@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
-import { NewsletterInline } from "@/components/site/NewsletterInline";
 import picoMarins from "@/assets/pico-marins.asset.json";
 import logoStacked from "@/assets/clareira-logo-vertical.svg.asset.json";
 import marina1 from "@/assets/marina-1.asset.json";
@@ -168,13 +167,6 @@ function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section className="px-6 sm:px-10 py-28">
-        <div className="mx-auto max-w-4xl">
-          <NewsletterInline />
         </div>
       </section>
     </PageShell>

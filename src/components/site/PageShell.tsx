@@ -1,10 +1,14 @@
 import type { ReactNode } from "react";
 import { Header } from "./Header";
-import { Footer } from "./Footer";
 
+// Header + main only — <Footer /> now lives in the root layout (src/routes/__root.tsx),
+// below the global blocks that appear after every page's own content (contact form,
+// newsletter). Rendered as a fragment (no wrapping div) so `main`'s flex-1 keeps
+// pushing everything below it (including Footer) to the bottom on short pages, via
+// the flex column that now lives in __root.tsx.
 export function PageShell({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-sm focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:text-primary-foreground"
@@ -15,8 +19,7 @@ export function PageShell({ children }: { children: ReactNode }) {
       <main id="main-content" className="flex-1">
         {children}
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }
 
