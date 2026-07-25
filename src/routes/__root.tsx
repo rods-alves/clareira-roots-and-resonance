@@ -15,6 +15,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { WhatsAppFloatButton } from "../components/site/WhatsAppFloatButton";
 import { Footer } from "../components/site/Footer";
 import { NewsletterInline } from "../components/site/NewsletterInline";
+import { ContactWhatsAppForm } from "../components/site/ContactWhatsAppForm";
 
 function NotFoundComponent() {
   return (
@@ -130,6 +131,11 @@ function RootComponent() {
       <div className="min-h-screen flex flex-col">
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
+        <section className="px-6 sm:px-10 py-20 sm:py-28">
+          <div className="mx-auto max-w-3xl">
+            <ContactWhatsAppForm />
+          </div>
+        </section>
         {!isNewsletterPage && (
           <section className="px-6 sm:px-10 py-20 sm:py-28">
             <div className="mx-auto max-w-4xl">
