@@ -16,6 +16,23 @@ import { WhatsAppFloatButton } from "../components/site/WhatsAppFloatButton";
 import { Footer } from "../components/site/Footer";
 import { NewsletterInline } from "../components/site/NewsletterInline";
 import { ContactWhatsAppForm } from "../components/site/ContactWhatsAppForm";
+import { CookieConsentBanner } from "../components/site/CookieConsentBanner";
+
+// Google Consent Mode v2 default state — denied until the visitor chooses
+// otherwise in CookieConsentBanner. No GA/Ads script is loaded yet (no
+// measurement ID); this just gets the consent signal ready so wiring GA/Ads up
+// later is a drop-in, not a rearchitecture.
+const CONSENT_MODE_DEFAULT_SNIPPET = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'wait_for_update': 500
+});
+`;
 
 function NotFoundComponent() {
   return (
@@ -109,6 +126,8 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
+        {/* Must run before any other script (GA/Ads included, once installed). */}
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_MODE_DEFAULT_SNIPPET }} />
         <HeadContent />
       </head>
       <body>
@@ -151,6 +170,7 @@ function RootComponent() {
         <Footer />
       </div>
       <WhatsAppFloatButton />
+      <CookieConsentBanner />
     </QueryClientProvider>
   );
 }

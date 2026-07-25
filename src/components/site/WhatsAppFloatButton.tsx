@@ -12,10 +12,10 @@ export function WhatsAppFloatButton() {
       rel="noreferrer"
       aria-label="Fale conosco no WhatsApp"
       // bottom-24 clears the mobile-only sticky CTA bar on /raiz-e-riso (also
-      // md:hidden there); z-40 is intentionally below the header (z-50). If a
-      // cookie-consent banner is added later, keep it out of this bottom-right
-      // corner (or give it its own higher z-index) so the two fixed elements
-      // don't stack on top of each other.
+      // md:hidden there); z-40 is intentionally below the header (z-50) and
+      // below CookieConsentBanner (z-[60], full-width at the bottom) — the
+      // consent banner briefly covers this button until the visitor makes a
+      // choice, which is expected and only happens once per ~12 months.
       className="fixed bottom-24 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/25 ring-1 ring-black/5 transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366] md:bottom-5"
     >
       <svg viewBox="0 0 448 512" className="h-7 w-7" fill="currentColor" aria-hidden="true">
