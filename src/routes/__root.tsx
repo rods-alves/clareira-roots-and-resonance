@@ -125,17 +125,22 @@ function RootComponent() {
   // /newsletter already has its own native newsletter capture — skip the global
   // block there so it isn't shown twice on that page.
   const isNewsletterPage = pathname === "/newsletter";
+  // /contato embeds ContactWhatsAppForm directly in its own two-column layout —
+  // skip the global block there so it isn't shown twice on that page.
+  const isContatoPage = pathname === "/contato";
 
   return (
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen flex flex-col">
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
-        <section className="px-6 sm:px-10 py-20 sm:py-28">
-          <div className="mx-auto max-w-3xl">
-            <ContactWhatsAppForm />
-          </div>
-        </section>
+        {!isContatoPage && (
+          <section className="px-6 sm:px-10 py-20 sm:py-28">
+            <div className="mx-auto max-w-3xl">
+              <ContactWhatsAppForm />
+            </div>
+          </section>
+        )}
         {!isNewsletterPage && (
           <section className="px-6 sm:px-10 py-20 sm:py-28">
             <div className="mx-auto max-w-4xl">
