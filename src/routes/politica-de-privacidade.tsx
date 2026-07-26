@@ -139,7 +139,9 @@ function PoliticaDePrivacidadePage() {
               Podemos atualizar esta política periodicamente. A data da última atualização estará
               sempre indicada nesta página.
             </p>
-            <p className="text-sm italic text-muted-foreground/80">Última atualização: [data]</p>
+            <p className="text-sm italic text-muted-foreground/80">
+              Última atualização: 26 de julho de 2026
+            </p>
           </LegalSection>
         </div>
       </section>

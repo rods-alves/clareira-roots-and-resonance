@@ -65,7 +65,9 @@ function TermosDeUsoPage() {
 
           <LegalSection number="7" title="Legislação aplicável">
             <p>Estes Termos são regidos pelas leis da República Federativa do Brasil.</p>
-            <p className="text-sm italic text-muted-foreground/80">Última atualização: [data]</p>
+            <p className="text-sm italic text-muted-foreground/80">
+              Última atualização: 26 de julho de 2026
+            </p>
           </LegalSection>
         </div>
       </section>
