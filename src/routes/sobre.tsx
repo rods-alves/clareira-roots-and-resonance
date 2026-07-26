@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
-import picoMarins from "@/assets/pico-marins.asset.json";
-import marina2 from "@/assets/marina-2.asset.json";
-import marina3 from "@/assets/marina-3.asset.json";
-import marina4 from "@/assets/marina-4.asset.json";
+import picoMarins from "@/assets/pico-marins.jpeg";
+import marina2 from "@/assets/marina-2.jpg";
+import marina3 from "@/assets/marina-3.jpg";
+import marina4 from "@/assets/marina-4.jpg";
 import { manifesto, regeneracao } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/sobre")({
       title: "Sobre a Clareira — manifesto, território e quem conduz",
       description:
         "Conheça o manifesto da Clareira, o território dos Marins, nossos princípios regenerativos e quem conduz o projeto.",
-      image: picoMarins.url,
+      image: picoMarins,
     }),
   component: SobrePage,
 });
@@ -71,7 +71,7 @@ function SobrePage() {
           <div className="mx-auto max-w-7xl grid gap-14 md:grid-cols-2 md:gap-20 items-center">
             <div className="relative aspect-[5/4] overflow-hidden rounded-sm">
               <img
-                src={picoMarins.url}
+                src={picoMarins}
                 alt="Pico dos Marins"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
@@ -158,7 +158,7 @@ function SobrePage() {
             <div className="mt-16 grid gap-14 md:grid-cols-[1.1fr_1fr] items-center">
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
                 <img
-                  src={marina3.url}
+                  src={marina3}
                   alt="Marina no território"
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
@@ -190,7 +190,7 @@ function SobrePage() {
               {[marina2, marina4].map((img, i) => (
                 <div key={i} className="relative aspect-square overflow-hidden rounded-sm">
                   <img
-                    src={img.url}
+                    src={img}
                     alt="Marina no território dos Marins"
                     className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"

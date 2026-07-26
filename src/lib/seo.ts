@@ -1,17 +1,16 @@
 import { site } from "./site-data";
+import defaultOgImage from "@/assets/pico-marins.jpeg";
 
 type SeoOptions = {
   title: string;
   description: string;
   /** Path relative to the site root, e.g. "/" or "/sobre". */
   path: string;
-  /** Root-relative asset URL (from an *.asset.json import), e.g. picoMarins.url. */
+  /** Root-relative asset URL (from an image import), e.g. picoMarins. */
   image?: string;
   /** Root-relative URL of this page's LCP image, preloaded for a faster paint. */
   preloadImage?: string;
 };
-
-const defaultOgImage = "/__l5e/assets-v1/3b3cd2a9-8c6b-4674-bbd1-c114b3244428/pico-marins.jpeg";
 
 export function seoHead({ title, description, path, image, preloadImage }: SeoOptions) {
   const url = path === "/" ? site.url : `${site.url}${path}`;

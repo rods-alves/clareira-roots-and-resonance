@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Mail, MessageCircle } from "lucide-react";
-import logoSymbol from "@/assets/logo-symbol.asset.json";
+import logoSymbol from "@/assets/logo-symbol.jpeg";
 import { nav, site } from "@/lib/site-data";
 import { setBannerOpen } from "@/lib/cookieConsent";
 import { trackWhatsAppLead } from "@/lib/analytics";
@@ -19,7 +19,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <img
-                src={logoSymbol.url}
+                src={logoSymbol}
                 alt=""
                 className="h-12 w-12 object-contain"
                 style={{ filter: "brightness(1.15)" }}

@@ -18,10 +18,10 @@ import { PageShell } from "@/components/site/PageShell";
 import { raizRiso } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 import { trackWhatsAppLead } from "@/lib/analytics";
-import rrBadge from "@/assets/raiz-riso-badge.jpg.asset.json";
-import marina1 from "@/assets/marina-1.asset.json";
-import marina3 from "@/assets/marina-3.asset.json";
-import marina4 from "@/assets/marina-4.asset.json";
+import rrBadge from "@/assets/raiz-riso-badge.jpg";
+import marina1 from "@/assets/marina-1.jpg";
+import marina3 from "@/assets/marina-3.jpg";
+import marina4 from "@/assets/marina-4.jpg";
 
 export const Route = createFileRoute("/raiz-e-riso")({
   head: () =>
@@ -30,8 +30,8 @@ export const Route = createFileRoute("/raiz-e-riso")({
       title: "Raiz & Riso — vivência nos Marins · Clareira",
       description:
         "Raiz & Riso é uma vivência da Clareira nos Sítios Guetahe e Nawera, nos Marins, Piquete-SP. Explorar, perceber, sentir.",
-      image: rrBadge.url,
-      preloadImage: rrBadge.url,
+      image: rrBadge,
+      preloadImage: rrBadge,
     }),
   component: RaizERiso,
 });
@@ -136,7 +136,7 @@ function RaizERiso() {
         <section className="pt-24 pb-20 sm:pt-32 sm:pb-28 px-6 sm:px-10">
           <div className="mx-auto max-w-4xl text-center">
             <img
-              src={rrBadge.url}
+              src={rrBadge}
               alt="Selo Raiz & Riso — Marins, Piquete-SP"
               className="mx-auto w-56 sm:w-72 md:w-80"
               style={{ filter: "drop-shadow(0 8px 24px rgba(74,93,58,0.18))" }}
@@ -205,7 +205,7 @@ function RaizERiso() {
             </div>
             <div className="order-1 md:order-2 relative aspect-[4/5] overflow-hidden rounded-sm">
               <img
-                src={marina1.url}
+                src={marina1}
                 alt="Marina no portão de madeira, com a Serra da Mantiqueira ao fundo"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
@@ -315,7 +315,7 @@ function RaizERiso() {
             <div className="mt-14 grid gap-12 md:grid-cols-[1.1fr_1fr] items-center">
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
                 <img
-                  src={marina3.url}
+                  src={marina3}
                   alt="Marina, anfitriã do Raiz & Riso"
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
@@ -351,7 +351,7 @@ function RaizERiso() {
 
             <div className="mt-12 relative aspect-[16/9] overflow-hidden rounded-sm">
               <img
-                src={marina4.url}
+                src={marina4}
                 alt="Vista da Serra da Mantiqueira a partir do território"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"

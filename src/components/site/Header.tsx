@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoHorizontal from "@/assets/clareira-logo-horizontal.svg.asset.json";
+import logoHorizontal from "@/assets/clareira-logo-horizontal.svg";
 import { nav, site } from "@/lib/site-data";
 
 export function Header() {
@@ -34,7 +34,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
         <Link to="/" className="flex items-center gap-3 min-w-0" onClick={() => setOpen(false)}>
           <img
-            src={logoHorizontal.url}
+            src={logoHorizontal}
             alt={site.name}
             className="h-11 sm:h-12 w-auto shrink-0 object-contain"
             style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.35))" }}

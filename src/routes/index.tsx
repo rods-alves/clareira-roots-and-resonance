@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
-import picoMarins from "@/assets/pico-marins.asset.json";
-import logoStacked from "@/assets/clareira-logo-vertical.svg.asset.json";
-import marina1 from "@/assets/marina-1.asset.json";
+import picoMarins from "@/assets/pico-marins.jpeg";
+import logoStacked from "@/assets/clareira-logo-vertical.svg";
+import marina1 from "@/assets/marina-1.jpg";
 import { emBreve, manifesto, site } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/")({
       title: "Clareira — experiências enraizadas no território",
       description:
         "Projeto regenerativo nos Marins, Serra da Mantiqueira. Experiências, estadias e saberes que aproximam pessoas da natureza.",
-      image: picoMarins.url,
-      preloadImage: picoMarins.url,
+      image: picoMarins,
+      preloadImage: picoMarins,
     }),
   component: HomePage,
 });
@@ -26,7 +26,7 @@ function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[100vh] overflow-hidden">
         <img
-          src={picoMarins.url}
+          src={picoMarins}
           alt="Pico dos Marins visto do território da Clareira"
           className="absolute inset-0 h-full w-full object-cover"
           fetchPriority="high"
@@ -41,7 +41,7 @@ function HomePage() {
         <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 pt-24 sm:pt-28">
           <div className="max-w-2xl">
             <img
-              src={logoStacked.url}
+              src={logoStacked}
               alt="Clareira — experiências enraizadas no território"
               className="w-40 sm:w-52 md:w-60"
               style={{
@@ -93,7 +93,7 @@ function HomePage() {
         <div className="mx-auto max-w-7xl grid gap-14 md:grid-cols-2 md:gap-20 items-center">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary">
             <img
-              src={marina1.url}
+              src={marina1}
               alt="Marina no portão de madeira com a Serra da Mantiqueira ao fundo"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
