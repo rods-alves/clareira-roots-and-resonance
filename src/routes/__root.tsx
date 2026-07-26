@@ -17,6 +17,8 @@ import { Footer } from "../components/site/Footer";
 import { NewsletterInline } from "../components/site/NewsletterInline";
 import { ContactWhatsAppForm } from "../components/site/ContactWhatsAppForm";
 import { CookieConsentBanner } from "../components/site/CookieConsentBanner";
+import { site } from "../lib/site-data";
+import clareiraSimbolo from "../assets/clareira-simbolo.svg";
 
 // Google Consent Mode v2 default state — denied until the visitor chooses
 // otherwise in CookieConsentBanner. No GA/Ads script is loaded yet (no
@@ -33,6 +35,27 @@ gtag('consent', 'default', {
   'wait_for_update': 500
 });
 `;
+
+// Organization JSON-LD — partial on purpose. Omits `email` and `sameAs`
+// (Instagram): both are still placeholders in site-data.ts, and publishing
+// fake contact info in structured data is exactly the kind of thing that gets
+// indexed and quoted back at people. Add them here once real values exist.
+const ORGANIZATION_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  url: site.url,
+  logo: `${site.url}${clareiraSimbolo}`,
+  description:
+    "Projeto regenerativo na Serra da Mantiqueira, nos Marins (Piquete-SP), com experiências, estadias e saberes que aproximam pessoas da natureza e do território.",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: site.whatsapp,
+    contactType: "customer service",
+    areaServed: "BR",
+    availableLanguage: "Portuguese",
+  },
+};
 
 function NotFoundComponent() {
   return (
@@ -130,6 +153,10 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         {/* Must run before any other script (GA/Ads included, once installed). */}
         <script dangerouslySetInnerHTML={{ __html: CONSENT_MODE_DEFAULT_SNIPPET }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSON_LD) }}
+        />
         <HeadContent />
       </head>
       <body>
