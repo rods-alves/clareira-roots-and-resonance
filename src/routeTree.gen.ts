@@ -15,9 +15,12 @@ import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as EstadiasRouteImport } from './routes/estadias'
 import { Route as MatoAdentroRouteImport } from './routes/mato-adentro'
 import { Route as NewsletterRouteImport } from './routes/newsletter'
+import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as RaizERisoRouteImport } from './routes/raiz-e-riso'
 import { Route as SaberesDigitaisRouteImport } from './routes/saberes-digitais'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
 import { Route as TerritorioLocalRouteImport } from './routes/territorio-local'
 import { Route as ExperienciasPersonalizadasRouteImport } from './routes/experiencias/personalizadas'
 
@@ -51,6 +54,16 @@ const NewsletterRoute = NewsletterRouteImport.update({
   path: '/newsletter',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
+  id: '/politica-de-cookies',
+  path: '/politica-de-cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RaizERisoRoute = RaizERisoRouteImport.update({
   id: '/raiz-e-riso',
   path: '/raiz-e-riso',
@@ -64,6 +77,11 @@ const SaberesDigitaisRoute = SaberesDigitaisRouteImport.update({
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
+  id: '/termos-de-uso',
+  path: '/termos-de-uso',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TerritorioLocalRoute = TerritorioLocalRouteImport.update({
@@ -85,9 +103,12 @@ export interface FileRoutesByFullPath {
   '/estadias': typeof EstadiasRoute
   '/mato-adentro': typeof MatoAdentroRoute
   '/newsletter': typeof NewsletterRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/saberes-digitais': typeof SaberesDigitaisRoute
   '/sobre': typeof SobreRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
   '/territorio-local': typeof TerritorioLocalRoute
   '/experiencias/personalizadas': typeof ExperienciasPersonalizadasRoute
 }
@@ -98,9 +119,12 @@ export interface FileRoutesByTo {
   '/estadias': typeof EstadiasRoute
   '/mato-adentro': typeof MatoAdentroRoute
   '/newsletter': typeof NewsletterRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/saberes-digitais': typeof SaberesDigitaisRoute
   '/sobre': typeof SobreRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
   '/territorio-local': typeof TerritorioLocalRoute
   '/experiencias/personalizadas': typeof ExperienciasPersonalizadasRoute
 }
@@ -112,9 +136,12 @@ export interface FileRoutesById {
   '/estadias': typeof EstadiasRoute
   '/mato-adentro': typeof MatoAdentroRoute
   '/newsletter': typeof NewsletterRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/raiz-e-riso': typeof RaizERisoRoute
   '/saberes-digitais': typeof SaberesDigitaisRoute
   '/sobre': typeof SobreRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
   '/territorio-local': typeof TerritorioLocalRoute
   '/experiencias/personalizadas': typeof ExperienciasPersonalizadasRoute
 }
@@ -127,9 +154,12 @@ export interface FileRouteTypes {
     | '/estadias'
     | '/mato-adentro'
     | '/newsletter'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
     | '/raiz-e-riso'
     | '/saberes-digitais'
     | '/sobre'
+    | '/termos-de-uso'
     | '/territorio-local'
     | '/experiencias/personalizadas'
   fileRoutesByTo: FileRoutesByTo
@@ -140,9 +170,12 @@ export interface FileRouteTypes {
     | '/estadias'
     | '/mato-adentro'
     | '/newsletter'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
     | '/raiz-e-riso'
     | '/saberes-digitais'
     | '/sobre'
+    | '/termos-de-uso'
     | '/territorio-local'
     | '/experiencias/personalizadas'
   id:
@@ -153,9 +186,12 @@ export interface FileRouteTypes {
     | '/estadias'
     | '/mato-adentro'
     | '/newsletter'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
     | '/raiz-e-riso'
     | '/saberes-digitais'
     | '/sobre'
+    | '/termos-de-uso'
     | '/territorio-local'
     | '/experiencias/personalizadas'
   fileRoutesById: FileRoutesById
@@ -167,9 +203,12 @@ export interface RootRouteChildren {
   EstadiasRoute: typeof EstadiasRoute
   MatoAdentroRoute: typeof MatoAdentroRoute
   NewsletterRoute: typeof NewsletterRoute
+  PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   RaizERisoRoute: typeof RaizERisoRoute
   SaberesDigitaisRoute: typeof SaberesDigitaisRoute
   SobreRoute: typeof SobreRoute
+  TermosDeUsoRoute: typeof TermosDeUsoRoute
   TerritorioLocalRoute: typeof TerritorioLocalRoute
   ExperienciasPersonalizadasRoute: typeof ExperienciasPersonalizadasRoute
 }
@@ -218,6 +257,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsletterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/politica-de-cookies': {
+      id: '/politica-de-cookies'
+      path: '/politica-de-cookies'
+      fullPath: '/politica-de-cookies'
+      preLoaderRoute: typeof PoliticaDeCookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/raiz-e-riso': {
       id: '/raiz-e-riso'
       path: '/raiz-e-riso'
@@ -237,6 +290,13 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos-de-uso': {
+      id: '/termos-de-uso'
+      path: '/termos-de-uso'
+      fullPath: '/termos-de-uso'
+      preLoaderRoute: typeof TermosDeUsoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/territorio-local': {
@@ -263,9 +323,12 @@ const rootRouteChildren: RootRouteChildren = {
   EstadiasRoute: EstadiasRoute,
   MatoAdentroRoute: MatoAdentroRoute,
   NewsletterRoute: NewsletterRoute,
+  PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   RaizERisoRoute: RaizERisoRoute,
   SaberesDigitaisRoute: SaberesDigitaisRoute,
   SobreRoute: SobreRoute,
+  TermosDeUsoRoute: TermosDeUsoRoute,
   TerritorioLocalRoute: TerritorioLocalRoute,
   ExperienciasPersonalizadasRoute: ExperienciasPersonalizadasRoute,
 }

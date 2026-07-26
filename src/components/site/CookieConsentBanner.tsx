@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { chooseConsent, initCookieConsent, useCookieBannerOpen } from "@/lib/cookieConsent";
 
 export function CookieConsentBanner() {
@@ -31,12 +32,12 @@ export function CookieConsentBanner() {
             <p className="text-sm leading-relaxed text-foreground">
               Usamos cookies para entender como o site é usado e melhorar sua experiência. Você pode
               aceitar todos, rejeitar os não essenciais ou personalizar sua escolha. Veja nossa{" "}
-              <a
-                href="/politica-de-cookies"
+              <Link
+                to="/politica-de-cookies"
                 className="underline underline-offset-2 hover:text-primary"
               >
                 política de cookies
-              </a>
+              </Link>
               .
             </p>
             <div className="flex flex-wrap items-center gap-3 sm:shrink-0">
@@ -67,12 +68,12 @@ export function CookieConsentBanner() {
           <div>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Escolha quais categorias de cookies podem ser usadas. Saiba mais na nossa{" "}
-              <a
-                href="/politica-de-cookies"
+              <Link
+                to="/politica-de-cookies"
                 className="underline underline-offset-2 hover:text-primary"
               >
                 política de cookies
-              </a>
+              </Link>
               .
             </p>
 

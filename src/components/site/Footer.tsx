@@ -4,12 +4,10 @@ import logoSymbol from "@/assets/logo-symbol.asset.json";
 import { nav, site } from "@/lib/site-data";
 import { setBannerOpen } from "@/lib/cookieConsent";
 
-// Plain <a> tags, not the typed <Link>, until /politica-de-privacidade,
-// /politica-de-cookies and /termos-de-uso exist as real routes.
 const legalLinks = [
-  { label: "Política de Privacidade", href: "/politica-de-privacidade" },
-  { label: "Política de Cookies", href: "/politica-de-cookies" },
-  { label: "Termos de Uso", href: "/termos-de-uso" },
+  { label: "Política de Privacidade", to: "/politica-de-privacidade" as const },
+  { label: "Política de Cookies", to: "/politica-de-cookies" as const },
+  { label: "Termos de Uso", to: "/termos-de-uso" as const },
 ];
 
 export function Footer() {
@@ -100,11 +98,11 @@ export function Footer() {
 
         <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-[color:var(--sand)]/60">
           {legalLinks.map((l, i) => (
-            <span key={l.href} className="flex items-center gap-2">
+            <span key={l.to} className="flex items-center gap-2">
               {i > 0 && <span aria-hidden>·</span>}
-              <a href={l.href} className="hover:text-[color:var(--sand)] transition-colors">
+              <Link to={l.to} className="hover:text-[color:var(--sand)] transition-colors">
                 {l.label}
-              </a>
+              </Link>
             </span>
           ))}
           <span aria-hidden>·</span>
