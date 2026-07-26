@@ -3,6 +3,7 @@ import { Instagram, Mail, MessageCircle } from "lucide-react";
 import logoSymbol from "@/assets/logo-symbol.asset.json";
 import { nav, site } from "@/lib/site-data";
 import { setBannerOpen } from "@/lib/cookieConsent";
+import { trackWhatsAppLead } from "@/lib/analytics";
 
 const legalLinks = [
   { label: "Política de Privacidade", to: "/politica-de-privacidade" as const },
@@ -72,6 +73,9 @@ export function Footer() {
               <li>
                 <a
                   href={site.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppLead("footer")}
                   className="inline-flex items-center gap-2 hover:text-[color:var(--sand)]"
                 >
                   <MessageCircle className="h-4 w-4" /> WhatsApp

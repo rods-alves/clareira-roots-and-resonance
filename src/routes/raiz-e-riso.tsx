@@ -17,6 +17,7 @@ import {
 import { PageShell } from "@/components/site/PageShell";
 import { raizRiso } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
+import { trackWhatsAppLead } from "@/lib/analytics";
 import rrBadge from "@/assets/raiz-riso-badge.jpg.asset.json";
 import marina1 from "@/assets/marina-1.asset.json";
 import marina3 from "@/assets/marina-3.asset.json";
@@ -193,7 +194,8 @@ function RaizERiso() {
               <a
                 href={raizRiso.cta.signupHref}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppLead("raiz_e_riso")}
                 className="mt-10 inline-flex items-center gap-2 rounded-sm px-6 py-3 text-sm text-white transition-transform hover:-translate-y-[1px]"
                 style={{ background: "var(--rr-terracotta)" }}
               >
@@ -516,7 +518,8 @@ function RaizERiso() {
               <a
                 href={raizRiso.cta.signupHref}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppLead("raiz_e_riso")}
                 className="inline-flex items-center gap-2 rounded-sm px-8 py-4 text-sm text-white transition-transform hover:-translate-y-[1px]"
                 style={{ background: "var(--rr-terracotta)" }}
               >
@@ -560,7 +563,8 @@ function RaizERiso() {
             <a
               href={raizRiso.cta.signupHref}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppLead("raiz_e_riso")}
               className="flex-1 inline-flex items-center justify-center gap-2 rounded-sm px-4 py-3 text-sm text-white"
               style={{ background: "var(--rr-terracotta)" }}
             >

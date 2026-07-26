@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Send } from "lucide-react";
 import { site } from "@/lib/site-data";
+import { trackWhatsAppLead } from "@/lib/analytics";
 
 function buildMessage(nome: string, email: string, whatsapp: string, mensagem: string) {
   const lines = [
@@ -23,6 +24,7 @@ export function ContactWhatsAppForm() {
     e.preventDefault();
     if (!nome || !mensagem) return;
     setOpening(true);
+    trackWhatsAppLead("contact_form");
     const text = buildMessage(nome, email, whatsapp, mensagem);
     window.open(
       `${site.whatsappHref}?text=${encodeURIComponent(text)}`,

@@ -1,4 +1,5 @@
 import { site } from "@/lib/site-data";
+import { trackWhatsAppLead } from "@/lib/analytics";
 
 const MESSAGE = "Olá! Vim pelo site da Clareira e gostaria de saber mais.";
 
@@ -9,7 +10,8 @@ export function WhatsAppFloatButton() {
     <a
       href={href}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
+      onClick={() => trackWhatsAppLead("floating_button")}
       aria-label="Fale conosco no WhatsApp"
       // bottom-24 clears the mobile-only sticky CTA bar on /raiz-e-riso (also
       // md:hidden there); z-40 is intentionally below the header (z-50) and
