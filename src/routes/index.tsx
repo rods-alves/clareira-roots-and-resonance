@@ -136,6 +136,52 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Experiências personalizadas */}
+      <section className="px-6 sm:px-10 pb-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-2xl">
+            <div className="text-[11px] uppercase tracking-[0.32em] text-[color:var(--tan)]">
+              para grupos e empresas
+            </div>
+            <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-primary leading-[1.05]">
+              Experiências personalizadas
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-8 sm:grid-cols-3">
+            <div className="border-t border-primary/25 pt-6">
+              <p className="text-[15px] leading-relaxed text-muted-foreground">
+                A Clareira cria vivências sob medida para grupos, equipes e empresas no território
+                dos Marins.
+              </p>
+            </div>
+            <div className="border-t border-primary/25 pt-6">
+              <p className="text-[15px] leading-relaxed text-muted-foreground">
+                Caminhadas guiadas, leitura da paisagem, práticas de presença, movimento,
+                integração, práticas em grupo e curadorias locais podem ser combinadas conforme o
+                propósito e o perfil de cada grupo.
+              </p>
+            </div>
+            <div className="border-t border-primary/25 pt-6">
+              <p className="text-[15px] leading-relaxed text-muted-foreground">
+                Para grupos fechados, encontros corporativos, retiros ou celebrações especiais,
+                entre em contato e vamos construir juntos uma experiência significativa.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-14">
+            <Link
+              to="/experiencias/personalizadas"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:text-[color:var(--terra)]"
+            >
+              Conhecer experiências personalizadas
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Em breve pillars */}
       <section className="px-6 sm:px-10 py-24 bg-[color:var(--sand)]/25 paper-texture border-y border-border/60">
         <div className="mx-auto max-w-7xl">
