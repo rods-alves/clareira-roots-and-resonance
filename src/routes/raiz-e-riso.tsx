@@ -528,13 +528,16 @@ function RaizERiso() {
               </a>
               <a
                 href={raizRiso.cta.waitlistHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppLead("raiz_e_riso_vip_waitlist")}
                 className="inline-flex items-center gap-2 rounded-sm border-2 px-8 py-4 text-sm transition-colors"
                 style={{
                   borderColor: "var(--rr-moss)",
                   color: "var(--rr-moss)",
                 }}
               >
-                Entrar na lista de espera
+                Entrar na lista VIP
               </a>
             </div>
 
@@ -572,13 +575,16 @@ function RaizERiso() {
             </a>
             <a
               href={raizRiso.cta.waitlistHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppLead("raiz_e_riso_vip_waitlist")}
               className="flex-1 inline-flex items-center justify-center gap-2 rounded-sm border-2 px-4 py-3 text-sm"
               style={{
                 borderColor: "var(--rr-moss)",
                 color: "var(--rr-moss)",
               }}
             >
-              Lista de espera
+              Lista VIP
             </a>
           </div>
         </div>

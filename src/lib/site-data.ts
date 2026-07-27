@@ -122,7 +122,7 @@ export const raizRiso = {
   },
   cta: {
     signupHref: `${site.whatsappHref}?text=Quero%20me%20inscrever%20no%20Raiz%20e%20Riso`,
-    waitlistHref: "/newsletter?interesse=raiz-e-riso",
+    waitlistHref: `${site.whatsappHref}?text=${encodeURIComponent("Olá! Quero entrar na lista VIP do Raiz & Riso e ser avisado(a) em primeira mão sobre a próxima edição.")}`,
   },
   incluso: [
     { icon: "tent", label: "Hospedagem em sítio nos Marins" },
