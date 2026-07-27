@@ -3,7 +3,7 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import picoMarins from "@/assets/pico-marins.jpeg";
 import logoStacked from "@/assets/clareira-logo-vertical.svg";
-import marina1 from "@/assets/marina-1.jpg";
+import raizERisoEvento from "@/assets/raiz-e-riso-evento.jpg";
 import { emBreve, manifesto, site } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 
@@ -93,8 +93,8 @@ function HomePage() {
         <div className="mx-auto max-w-7xl grid gap-14 md:grid-cols-2 md:gap-20 items-center">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary">
             <img
-              src={marina1}
-              alt="Marina no portão de madeira com a Serra da Mantiqueira ao fundo"
+              src={raizERisoEvento}
+              alt="Grupo de participantes da vivência Raiz & Riso reunido com o Pico dos Marins ao fundo"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
               decoding="async"
