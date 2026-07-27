@@ -65,14 +65,14 @@ export const emBreve = [
     to: "/mato-adentro",
     title: "Mato Adentro",
     kicker: "trilhas & imersões guiadas",
-    body: "Caminhadas contemplativas pela Serra da Mantiqueira, imersões silenciosas na floresta e travessias até o Pico dos Marins conduzidas por quem vive o território.",
+    body: "Vivência de iniciação à natureza para quem quer começar a caminhar, explorar trilhas e estar no mato com mais segurança, presença e confiança. Uma experiência acolhedora para dar os primeiros passos no mundo outdoor, sem pressa, sem performance e sem medo.",
   },
   {
     id: "estadias",
     to: "/estadias",
     title: "Estadias",
     kicker: "hospedagem enraizada",
-    body: "Um punhado de acomodações simples e cuidadas, feitas com materiais locais, para dormir com o silêncio da montanha e acordar com o canto dos pássaros.",
+    body: "Opções de hospedagem variadas, aconchegantes e confortáveis para quem deseja permanecer mais tempo junto à paisagem. Chalés, cabanas e espaços de camping pensados para acolher diferentes formas de estar na natureza, sempre com vistas exuberantes e o ritmo tranquilo da montanha.",
   },
   {
     id: "saberes",
@@ -85,8 +85,8 @@ export const emBreve = [
     id: "territorio-local",
     to: "/territorio-local",
     title: "Território local",
-    kicker: "rede de artesãos & produtores",
-    body: "Uma curadoria de produtores, artesãos e agricultores da região dos Marins — um mapa vivo para quem quer atravessar o território de maneira mais próxima e justa.",
+    kicker: "curadoria de negócios locais",
+    body: "Uma curadoria de produtos, serviços e experiências locais para quem deseja conhecer a região com mais consciência, cuidado e impacto positivo. Um convite ao turismo de base comunitária, conectando visitantes a pessoas, saberes, sabores e iniciativas que fortalecem o território por onde passam.",
   },
 ];
 

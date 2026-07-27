@@ -14,7 +14,7 @@ export const Route = createFileRoute("/territorio-local")({
     }),
   component: () => (
     <UnderConstructionPage
-      kicker="rede de artesãos & produtores"
+      kicker="curadoria de negócios locais"
       title={data.title}
       intro={data.body}
     />
