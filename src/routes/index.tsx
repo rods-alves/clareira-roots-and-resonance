@@ -40,8 +40,9 @@ function HomePage() {
         {/* Content: logo close to the header, location below it, then the tagline */}
         <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 pt-24 sm:pt-28">
           <div className="max-w-2xl">
-            {/* relative+inline-block here adds no padding/margin of its own, so it
-                takes up exactly the same space as the bare <img> did — the absolutely
+            {/* block/w-fit (not inline-block) avoids the inline baseline gap that
+                otherwise shifts everything below by a few px — this wrapper takes up
+                exactly the same space as the bare <img> did, so the absolutely
                 positioned backdrop bleeds behind it without shifting anything below. */}
             <div className="relative block w-fit">
               <div
