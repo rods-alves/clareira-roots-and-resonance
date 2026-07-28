@@ -19,7 +19,7 @@ import { raizRiso } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 import { trackWhatsAppLead } from "@/lib/analytics";
 import rrBadge from "@/assets/raiz-riso-badge.jpg";
-import marina1 from "@/assets/marina-1.jpg";
+import raizERisoEvento from "@/assets/raiz-e-riso-evento.jpg";
 import marina3 from "@/assets/marina-3.jpg";
 import marina4 from "@/assets/marina-4.jpg";
 
@@ -205,8 +205,8 @@ function RaizERiso() {
             </div>
             <div className="order-1 md:order-2 relative aspect-[4/5] overflow-hidden rounded-sm">
               <img
-                src={marina1}
-                alt="Marina no portão de madeira, com a Serra da Mantiqueira ao fundo"
+                src={raizERisoEvento}
+                alt="Grupo de participantes da vivência Raiz & Riso reunido com o Pico dos Marins ao fundo"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"
