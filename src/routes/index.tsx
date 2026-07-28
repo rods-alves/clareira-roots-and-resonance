@@ -40,15 +40,24 @@ function HomePage() {
         {/* Content: logo close to the header, location below it, then the tagline */}
         <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 pt-24 sm:pt-28">
           <div className="max-w-2xl">
-            <img
-              src={logoStacked}
-              alt="Clareira — experiências enraizadas no território"
-              className="w-40 sm:w-52 md:w-60"
-              style={{
-                filter:
-                  "drop-shadow(0 10px 30px rgba(0,0,0,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.4))",
-              }}
-            />
+            {/* relative+inline-block here adds no padding/margin of its own, so it
+                takes up exactly the same space as the bare <img> did — the absolutely
+                positioned backdrop bleeds behind it without shifting anything below. */}
+            <div className="relative block w-fit">
+              <div
+                aria-hidden
+                className="absolute -inset-5 rounded-2xl bg-black/35 backdrop-blur-[2px]"
+              />
+              <img
+                src={logoStacked}
+                alt="Clareira — experiências enraizadas no território"
+                className="relative w-40 sm:w-52 md:w-60"
+                style={{
+                  filter:
+                    "drop-shadow(0 10px 30px rgba(0,0,0,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(0,0,0,0.55))",
+                }}
+              />
+            </div>
             <div
               className="mt-6 inline-flex items-center gap-2 text-[color:var(--cream)] text-xs sm:text-[13px] font-semibold uppercase tracking-[0.36em]"
               style={{ textShadow: "0 2px 8px rgba(0,0,0,0.55)" }}
