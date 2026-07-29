@@ -52,9 +52,7 @@ function SobrePage() {
           <div className="text-[11px] uppercase tracking-[0.32em] text-[color:var(--tan)]">
             01 · manifesto
           </div>
-          <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-primary">
-            O que nos move.
-          </h2>
+          <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-primary">O que nos move.</h2>
           <div className="mt-10 space-y-6 text-lg leading-[1.75] text-primary/85">
             {manifesto.long.map((p, i) => (
               <p key={i} className={i === 0 ? "font-serif italic text-2xl leading-[1.5]" : ""}>
@@ -66,7 +64,10 @@ function SobrePage() {
       </section>
 
       {/* Território */}
-      <section id="territorio" className="scroll-mt-28 border-t border-border/60 bg-[color:var(--sand)]/25 paper-texture">
+      <section
+        id="territorio"
+        className="scroll-mt-28 border-t border-border/60 bg-[color:var(--sand)]/25 paper-texture"
+      >
         <div className="px-6 sm:px-10 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl grid gap-14 md:grid-cols-2 md:gap-20 items-center">
             <div className="relative aspect-[5/4] overflow-hidden rounded-sm">
@@ -87,21 +88,19 @@ function SobrePage() {
               </h2>
               <div className="mt-8 space-y-5 text-[15px] leading-[1.8] text-primary/85">
                 <p>
-                  O Pico dos Marins se ergue a 2.420 metros sobre a região de
-                  Piquete, no interior de São Paulo. Ao seu redor, um mosaico de
-                  mata atlântica preservada, nascentes, sítios e comunidades que
-                  sustentam a vida da serra.
+                  O Pico dos Marins se ergue a 2.420 metros sobre a região de Piquete, no interior
+                  de São Paulo. Ao seu redor, um mosaico de mata atlântica preservada, nascentes,
+                  sítios e comunidades que sustentam a vida da serra.
                 </p>
                 <p>
-                  A Clareira nasce nesse contexto — não como um empreendimento
-                  isolado, mas como uma extensão do território. Escutamos os
-                  ciclos da montanha, aprendemos com quem já cuida deste chão há
-                  muito tempo e cultivamos formas de habitá-lo com mais atenção.
+                  A Clareira nasce nesse contexto — não como um empreendimento isolado, mas como uma
+                  extensão do território. Escutamos os ciclos da montanha, aprendemos com quem já
+                  cuida deste chão há muito tempo e cultivamos formas de habitá-lo com mais atenção.
                 </p>
                 <p>
-                  Aqui, a paisagem é convite e mestra. O silêncio da mata, o som
-                  dos riachos e o desenho do céu sobre as cristas são o primeiro
-                  currículo de qualquer experiência que oferecemos.
+                  Aqui, a paisagem é convite e mestra. O silêncio da mata, o som dos riachos e o
+                  desenho do céu sobre as cristas são o primeiro currículo de qualquer experiência
+                  que oferecemos.
                 </p>
               </div>
             </div>
@@ -120,8 +119,8 @@ function SobrePage() {
               Princípios que guiam cada gesto.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Regenerar, para nós, é um verbo cotidiano. Se traduz em decisões
-              pequenas e persistentes — de arquitetura, de curadoria, de convívio.
+              Regenerar, para nós, é um verbo cotidiano. Se traduz em decisões pequenas e
+              persistentes — de arquitetura, de curadoria, de convívio.
             </p>
           </div>
 
@@ -132,9 +131,7 @@ function SobrePage() {
                   princípio 0{i + 1}
                 </div>
                 <h3 className="mt-3 font-serif text-2xl text-primary">{r.title}</h3>
-                <p className="mt-3 text-[15px] leading-[1.75] text-muted-foreground">
-                  {r.body}
-                </p>
+                <p className="mt-3 text-[15px] leading-[1.75] text-muted-foreground">{r.body}</p>
               </article>
             ))}
           </div>
@@ -172,15 +169,21 @@ function SobrePage() {
                 </div>
                 <div className="mt-6 space-y-4 text-[15px] leading-[1.8] text-[color:var(--cream)]/85">
                   <p>
-                    [texto editável] Marina é quem abre os portões da Clareira todo
-                    dia. Vive nos Marins, conhece as trilhas pelo nome e conduz as
-                    experiências com uma escuta rara — dessas que só nascem de anos
-                    de convivência com a montanha.
+                    Marina Schmoeller é bióloga, ecóloga e uma pessoa profundamente interessada nas
+                    relações que construímos com os lugares onde vivemos. Depois de muitos anos
+                    entre universidades, projetos de conservação e restauração da natureza, escolheu
+                    fincar raízes na Serra da Mantiqueira, aos pés do Pico dos Marins. Ali, entre
+                    trilhas, obras que nunca saem exatamente como planejado, plantios, bichos,
+                    montanhas e mudanças de tempo, nasceu a Clareira.
                   </p>
                   <p>
-                    [texto editável] Sua formação atravessa a hospitalidade, a
-                    agroecologia e o cuidado com o corpo. É ela quem costura cada
-                    detalhe entre a floresta, a cozinha e as pessoas que chegam.
+                    Marina transita entre ciência e sensibilidade, planejamento e improviso,
+                    pensamento crítico e mão na terra. Gosta de escrever, contar histórias, observar
+                    padrões, aprender coisas novas e criar experiências que aproximem pessoas,
+                    natureza e território de maneira concreta — sem idealizar a vida rural, mas sem
+                    perder o encantamento por ela. A Clareira é uma extensão desse caminho: um
+                    projeto feito de curiosidade, cuidado e da vontade de criar espaço para outras
+                    formas de perceber, viver e se relacionar com o mundo.
                   </p>
                 </div>
               </div>
@@ -206,7 +209,10 @@ function SobrePage() {
             </div>
 
             <div className="mt-16 text-sm">
-              <Link to="/contato" className="text-[color:var(--sand)] underline underline-offset-4 hover:text-[color:var(--cream)]">
+              <Link
+                to="/contato"
+                className="text-[color:var(--sand)] underline underline-offset-4 hover:text-[color:var(--cream)]"
+              >
                 falar com a Clareira →
               </Link>
             </div>
