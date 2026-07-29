@@ -15,7 +15,8 @@ import {
   Sprout,
 } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
-import { raizRiso } from "@/lib/site-data";
+import { FAQ } from "@/components/site/FAQ";
+import { raizRiso, raizRisoFaq } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 import { trackWhatsAppLead } from "@/lib/analytics";
 import rrBadge from "@/assets/raiz-riso-badge.jpg";
@@ -43,6 +44,7 @@ const anchors = [
   { id: "quem-conduz", label: "Quem conduz" },
   { id: "clima", label: "O que esperar" },
   { id: "data", label: "Próxima data" },
+  { id: "faq", label: "Perguntas frequentes" },
   { id: "inscricao", label: "Inscrição" },
 ];
 
@@ -496,6 +498,11 @@ function RaizERiso() {
               {raizRiso.nextDate.spotsLeft}
             </div>
           </div>
+        </section>
+
+        {/* Perguntas frequentes */}
+        <section id="faq" className="scroll-mt-40 px-6 sm:px-10 py-20 sm:py-28">
+          <FAQ title="Perguntas frequentes" items={raizRisoFaq} />
         </section>
 
         {/* Inscrição */}

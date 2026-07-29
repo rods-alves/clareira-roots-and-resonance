@@ -43,8 +43,24 @@ function TermosDeUsoPage() {
           <LegalSection number="4" title="Inscrições em vivências e encontros">
             <p>
               A inscrição em vivências como o Raiz & Riso está sujeita à disponibilidade de vagas e
-              aos termos informados no momento da inscrição.{" "}
-              <span className="italic">[a definir: política de cancelamento e reembolso]</span>
+              aos termos informados no momento da inscrição.
+            </p>
+            <p>
+              Nas inscrições realizadas pela internet ou por outro meio não presencial, o
+              participante poderá exercer o direito de arrependimento no prazo de sete dias corridos
+              após a contratação, com reembolso integral do valor pago, desde que o pedido seja
+              comunicado antes do início da vivência.
+            </p>
+            <p>
+              Após o encerramento desse prazo: reembolso integral com dez dias ou mais de
+              antecedência; reembolso de 80% entre cinco e nove dias; reembolso de 50% com menos de
+              cinco dias; e sem reembolso nas últimas 24 horas ou em caso de não comparecimento sem
+              aviso. A inscrição pode ser transferida para outra pessoa sem custo, mediante
+              comunicação prévia à organização.
+            </p>
+            <p className="text-sm italic text-muted-foreground/80">
+              Detalhes completos da política de cancelamento estão disponíveis no FAQ da página do
+              Raiz & Riso.
             </p>
           </LegalSection>
 

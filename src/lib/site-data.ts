@@ -138,3 +138,61 @@ export const raizRiso = {
     'Nada de mística excessiva ou performance. Também não precisa "ser outdoor" para participar. A experiência foi desenhada para jovens e adultos sem restrições significativas de mobilidade. Não é necessário ter condicionamento físico elevado, mas é importante ser capaz de realizar caminhadas e outros exercícios leves sem auxílio. Caso você tenha alguma restrição de mobilidade e deseje participar, entre em contato com a gente. Teremos prazer em conversar e avaliar juntos a melhor forma de te receber.',
   ],
 };
+
+export const raizRisoFaq: { question: string; answer: string }[] = [
+  {
+    question: "Qual é a duração do Raiz & Riso?",
+    answer:
+      "A vivência dura entre quatro e cinco horas. O horário exato de início e término é informado na página de inscrição de cada edição.",
+  },
+  {
+    question: "A alimentação está incluída?",
+    answer:
+      "Sim. Durante a vivência, servimos um café da manhã farto, preparado a partir de uma curadoria de produtos locais e regionais.\nAo preencher a ficha de inscrição, informe suas restrições ou necessidades alimentares no campo indicado. Faremos o possível para considerá-las na preparação do cardápio.",
+  },
+  {
+    question: "Onde o Raiz & Riso é realizado?",
+    answer:
+      "A vivência acontece nos sítios Guetahe e Nawera, em Piquete, São Paulo, na Serra da Mantiqueira. Estamos a aproximadamente 1,5 km do acesso à trilha do Pico dos Marins.",
+  },
+  {
+    question: "O transporte até o local está incluído?",
+    answer:
+      "Não. O deslocamento até o local não está incluído no valor da inscrição.\nPara quem não quiser ou não puder utilizar veículo próprio, a organização disponibilizará contatos e opções de transporte fretado. O pagamento deverá ser acertado diretamente com os prestadores do serviço.\nHá espaço para estacionamento descoberto nos sítios.",
+  },
+  {
+    question: "Como chegar?",
+    answer:
+      "Os sítios estão localizados próximos à divisa entre os estados de São Paulo e Minas Gerais. O principal acesso é feito por Piquete, em São Paulo.\nPela Rodovia Presidente Dutra — BR-116 —, siga até Lorena e pegue a saída em direção a Piquete e ao sul de Minas Gerais, pela BR-459. Após passar pelo portal de Piquete, siga até a bifurcação e entre à esquerda na Estrada Vicinal José Rodrigues Ferreira, que dá acesso à Vila dos Marins.\nDepois da vila, pegue a subida à esquerda na bifurcação e percorra aproximadamente quatro quilômetros por estrada de terra até os sítios.\nOs participantes receberão orientações mais detalhadas, localização, mapas e pontos de referência antes do evento.",
+  },
+  {
+    question: "Com que frequência o Raiz & Riso acontece?",
+    answer:
+      "Pretendemos realizar uma nova edição aproximadamente a cada três meses.\nPara receber as próximas datas em primeira mão, acompanhe a newsletter da Clareira ou entre para a lista VIP do Raiz & Riso.",
+  },
+  {
+    question: "Crianças podem participar?",
+    answer:
+      "O Raiz & Riso foi pensado principalmente para jovens e adultos.\nCaso queira levar uma criança como acompanhante, entre em contato com a organização antes de realizar a inscrição, para verificarmos a possibilidade de participação naquela edição.\nNo momento, os sítios não oferecem atividades específicas para o público infantil nem contam com monitores responsáveis pelas crianças.",
+  },
+  {
+    question: "Posso levar meu pet?",
+    answer:
+      "Neste momento, não recomendamos levar animais de estimação. Os sítios ainda não possuem estrutura adequada para receber os pets dos visitantes e nossos próprios animais podem ter dificuldades de convivência com outros animais.",
+  },
+  {
+    question: "Há opções de hospedagem?",
+    answer:
+      "As hospedagens da Clareira ainda estão em preparação. Enquanto elas não ficam prontas, podemos indicar parceiros e opções de hospedagem na região para quem quiser passar a noite e aproveitar a viagem com mais calma.\nAs reservas, condições e pagamentos devem ser combinados diretamente com cada estabelecimento.",
+  },
+  {
+    question: "O que acontece em caso de condições climáticas extremas?",
+    answer:
+      "O Raiz & Riso é uma vivência ao ar livre. Por isso, acompanhamos atentamente as condições meteorológicas nos dias anteriores ao evento.\nCaso a previsão indique chuva intensa, ventania forte ou outra condição que possa comprometer a segurança ou a qualidade da experiência, a edição poderá ser remarcada. Nessa situação, os participantes poderão escolher entre transferir integralmente a inscrição para a nova data, receber um crédito de igual valor para outra edição ou solicitar o reembolso integral do valor pago.\nA decisão e as orientações serão comunicadas aos inscritos com a maior antecedência possível.",
+  },
+  {
+    question: "Se eu desistir ou não puder comparecer, recebo meu pagamento de volta?",
+    answer:
+      "Nas inscrições realizadas pela internet ou por outro meio não presencial, o participante poderá exercer o direito de arrependimento no prazo de sete dias corridos após a contratação, com reembolso integral do valor pago, desde que o pedido seja comunicado antes do início da vivência. Esse direito prevalece sobre os demais prazos da política de cancelamento.\nApós o encerramento desse prazo, serão aplicadas as seguintes condições:\n• Com dez dias ou mais de antecedência: reembolso integral;\n• Entre cinco e nove dias de antecedência: reembolso de 80% do valor pago;\n• Com menos de cinco dias de antecedência: reembolso de 50% do valor pago;\n• Nas últimas 24 horas antes do evento ou em caso de não comparecimento sem aviso: não haverá reembolso, pois, nessa etapa, alimentos, materiais, brindes e serviços relacionados à participação já terão sido contratados ou adquiridos.\nA inscrição poderá ser transferida para outra pessoa sem custo, preferencialmente mediante comunicação à organização com pelo menos 24 horas de antecedência e envio dos dados do novo participante. Solicitações feitas após esse prazo serão avaliadas conforme a possibilidade operacional.\nCaso a vaga cancelada seja preenchida por outra pessoa, o valor eventualmente retido será devolvido ao participante que solicitou o cancelamento.\nPara solicitar cancelamento ou substituição, entre em contato pelos canais informados na confirmação da inscrição.",
+  },
+];
