@@ -239,21 +239,14 @@ function RaizERiso() {
             >
               Para quem quer voltar a se parecer consigo.
             </h2>
-            <ul className="mt-10 grid gap-5 sm:grid-cols-2">
+            <div
+              className="mt-10 max-w-2xl space-y-5 text-[15px] leading-[1.7]"
+              style={{ color: "var(--rr-leather)" }}
+            >
               {raizRiso.paraQuem.map((p, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-3 text-[15px] leading-[1.7]"
-                  style={{ color: "var(--rr-leather)" }}
-                >
-                  <span
-                    className="mt-2 h-1.5 w-1.5 rounded-full shrink-0"
-                    style={{ background: "var(--rr-terracotta)" }}
-                  />
-                  {p}
-                </li>
+                <p key={i}>{p}</p>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
@@ -285,8 +278,19 @@ function RaizERiso() {
               })}
             </ul>
 
+            <div
+              className="mt-10 inline-flex items-start gap-3 rounded-sm border px-5 py-4 text-sm"
+              style={{
+                borderColor: "color-mix(in oklab, var(--rr-terracotta) 40%, transparent)",
+                background: "color-mix(in oklab, var(--rr-terracotta) 8%, transparent)",
+                color: "var(--rr-leather)",
+              }}
+            >
+              {raizRiso.inclusoAviso}
+            </div>
+
             <p
-              className="mt-14 text-sm italic"
+              className="mt-8 text-sm italic"
               style={{ color: "color-mix(in oklab, var(--rr-leather) 70%, transparent)" }}
             >
               * conteúdo editável — ajuste a curadoria final de cada edição em
