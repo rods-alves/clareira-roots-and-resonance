@@ -29,15 +29,21 @@ function NewsletterPage() {
 
           <ul className="mt-16 grid gap-6 sm:grid-cols-3 text-sm text-primary/80">
             <li className="border-t border-primary/20 pt-4">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[color:var(--tan)]">o que chega</div>
+              <div className="text-[11px] uppercase tracking-[0.22em] text-[color:var(--tan)]">
+                o que chega
+              </div>
               <p className="mt-2">cartas ocasionais, no ritmo das estações</p>
             </li>
             <li className="border-t border-primary/20 pt-4">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[color:var(--tan)]">de quem</div>
+              <div className="text-[11px] uppercase tracking-[0.22em] text-[color:var(--tan)]">
+                de quem
+              </div>
               <p className="mt-2">escritas à mão pela equipe da Clareira</p>
             </li>
             <li className="border-t border-primary/20 pt-4">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[color:var(--tan)]">seus dados</div>
+              <div className="text-[11px] uppercase tracking-[0.22em] text-[color:var(--tan)]">
+                seus dados
+              </div>
               <p className="mt-2">guardados com cuidado — sem repasses</p>
             </li>
           </ul>

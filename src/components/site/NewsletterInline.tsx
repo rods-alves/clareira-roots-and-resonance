@@ -18,10 +18,18 @@ export function NewsletterInline({ compact, title, description }: Props) {
   };
 
   return (
-    <div className={compact ? "" : "rounded-sm border border-border bg-[color:var(--sand)]/25 p-8 sm:p-12 paper-texture"}>
+    <div
+      className={
+        compact
+          ? ""
+          : "rounded-sm border border-border bg-[color:var(--sand)]/25 p-8 sm:p-12 paper-texture"
+      }
+    >
       {!compact && (
         <>
-          <div className="text-[11px] uppercase tracking-[0.28em] text-[color:var(--tan)]">Cartas da Clareira</div>
+          <div className="text-[11px] uppercase tracking-[0.28em] text-[color:var(--tan)]">
+            Cartas da Clareira
+          </div>
           <h3 className="mt-3 font-serif text-3xl sm:text-4xl text-primary max-w-2xl">
             {title ?? "Uma carta ocasional, com o ritmo da montanha."}
           </h3>
@@ -32,7 +40,10 @@ export function NewsletterInline({ compact, title, description }: Props) {
         </>
       )}
 
-      <form onSubmit={submit} className={`flex flex-col sm:flex-row gap-3 ${compact ? "" : "mt-6"}`}>
+      <form
+        onSubmit={submit}
+        className={`flex flex-col sm:flex-row gap-3 ${compact ? "" : "mt-6"}`}
+      >
         <input
           type="email"
           required

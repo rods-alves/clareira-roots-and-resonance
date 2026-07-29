@@ -19,10 +19,12 @@ Sempre que o conteúdo do site mudar, repita este processo pra gerar uma pasta
    Se uma rota nova for adicionada ao site, inclua o caminho dela na lista `ROUTES` no topo do script.
 
 4. Confira localmente antes de publicar:
+
    ```bash
    cd static-export
    python -m http.server 8000
    ```
+
    Abra `http://localhost:8000` e navegue pelo site (não abra os arquivos `.html` direto do disco com `file://` — os assets usam caminhos absolutos tipo `/assets/...` e só resolvem servidos a partir da raiz). Confirme que as páginas carregam com estilo certo, que interações client-side (como o accordion de FAQ em `/raiz-e-riso`) funcionam, e que o console do navegador não mostra 404 de asset.
 
 5. Suba o conteúdo de `static-export/` (tudo o que está dentro da pasta, não a pasta em si) via Gerenciador de Arquivos do hPanel, para dentro de `public_html/`.

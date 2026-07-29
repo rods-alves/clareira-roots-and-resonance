@@ -92,9 +92,7 @@ export function Header() {
           type="button"
           onClick={() => setOpen((v) => !v)}
           className={`lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
-            scrolled
-              ? "border-border text-primary"
-              : "border-white/40 text-[color:var(--cream)]"
+            scrolled ? "border-border text-primary" : "border-white/40 text-[color:var(--cream)]"
           }`}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
@@ -125,9 +123,7 @@ export function Header() {
                 {item.children && (
                   <button
                     type="button"
-                    onClick={() =>
-                      setOpenGroup((g) => (g === item.label ? null : item.label))
-                    }
+                    onClick={() => setOpenGroup((g) => (g === item.label ? null : item.label))}
                     aria-label="Expandir"
                     className="p-3 text-primary/60"
                   >
