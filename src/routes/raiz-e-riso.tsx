@@ -41,7 +41,7 @@ const anchors = [
   { id: "para-quem", label: "Para quem" },
   { id: "incluso", label: "O que inclui" },
   { id: "quem-conduz", label: "Quem conduz" },
-  { id: "clima", label: "O clima do encontro" },
+  { id: "clima", label: "O que esperar" },
   { id: "data", label: "Próxima data" },
   { id: "inscricao", label: "Inscrição" },
 ];
@@ -62,8 +62,7 @@ function Stamp({
   Icon: React.ComponentType<{ className?: string }>;
   size?: "sm" | "md" | "lg";
 }) {
-  const box =
-    size === "sm" ? "h-10 w-10" : size === "lg" ? "h-20 w-20" : "h-14 w-14";
+  const box = size === "sm" ? "h-10 w-10" : size === "lg" ? "h-20 w-20" : "h-14 w-14";
   const inner = size === "sm" ? "h-4 w-4" : size === "lg" ? "h-9 w-9" : "h-6 w-6";
   return (
     <span
@@ -176,15 +175,15 @@ function RaizERiso() {
                 style={{ color: "color-mix(in oklab, var(--rr-moss) 85%, black)" }}
               >
                 <p>
-                  Raiz &amp; Riso é uma vivência de poucos dias, feita para
-                  reaproximar corpo, floresta e presença. Acontece nos Sítios
-                  Guetahe e Nawera, na Serra da Mantiqueira, entre araucárias, café
-                  coado, terra fresca e o silêncio das manhãs da montanha.
+                  Raiz &amp; Riso é uma vivência de poucos dias, feita para reaproximar corpo,
+                  floresta e presença. Acontece nos Sítios Guetahe e Nawera, na Serra da
+                  Mantiqueira, entre araucárias, café coado, terra fresca e o silêncio das manhãs da
+                  montanha.
                 </p>
                 <p>
-                  Não é retiro, não é curso, não é workshop. É um encontro
-                  pequeno — de gente atenta, refeições generosas, caminhadas sem
-                  pressa e conversas que só nascem longe das telas.
+                  Não é retiro, não é curso, não é workshop. É um encontro pequeno — de gente
+                  atenta, refeições generosas, caminhadas sem pressa e conversas que só nascem longe
+                  das telas.
                 </p>
                 <p className="font-serif italic text-xl">
                   Aqui, a proposta é uma só: explorar, perceber, sentir.
@@ -214,8 +213,7 @@ function RaizERiso() {
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
-                  background:
-                    "linear-gradient(180deg, transparent 60%, rgba(74,93,58,0.35))",
+                  background: "linear-gradient(180deg, transparent 60%, rgba(74,93,58,0.35))",
                 }}
               />
             </div>
@@ -339,15 +337,14 @@ function RaizERiso() {
                   style={{ color: "color-mix(in oklab, var(--rr-cream) 90%, transparent)" }}
                 >
                   <p>
-                    [bio editável] Marina vive nos Marins, cuida da terra que
-                    recebe o Raiz &amp; Riso e conduz as vivências com uma
-                    presença rara — dessas que só nascem de anos convivendo com
-                    a montanha.
+                    [bio editável] Marina vive nos Marins, cuida da terra que recebe o Raiz &amp;
+                    Riso e conduz as vivências com uma presença rara — dessas que só nascem de anos
+                    convivendo com a montanha.
                   </p>
                   <p>
-                    [bio editável] Seu olhar cruza hospitalidade, agroecologia e
-                    cuidado. É ela quem costura cada detalhe entre a floresta, a
-                    cozinha, o fogo e as pessoas que chegam.
+                    [bio editável] Seu olhar cruza hospitalidade, agroecologia e cuidado. É ela quem
+                    costura cada detalhe entre a floresta, a cozinha, o fogo e as pessoas que
+                    chegam.
                   </p>
                 </div>
               </div>
@@ -377,27 +374,24 @@ function RaizERiso() {
               className="mt-4 font-serif text-4xl sm:text-5xl leading-[1.05]"
               style={{ color: "var(--rr-moss)" }}
             >
-              O clima do encontro.
+              O que esperar.
             </h2>
 
             <div className="mt-14 space-y-12">
               <div className="grid gap-6 sm:grid-cols-[auto_1fr] items-start">
                 <Stamp Icon={Mountain} />
                 <div>
-                  <h3
-                    className="font-serif text-2xl"
-                    style={{ color: "var(--rr-moss)" }}
-                  >
-                    O inverno já está chegando por aqui.
+                  <h3 className="font-serif text-2xl" style={{ color: "var(--rr-moss)" }}>
+                    Uma experiência genuinamente outdoor.
                   </h3>
                   <p
                     className="mt-3 text-[15px] leading-[1.8]"
                     style={{ color: "var(--rr-leather)" }}
                   >
-                    Traga roupas quentinhas para garantir seu conforto ao longo
-                    do dia — especialmente para o início da manhã e o fim da
-                    tarde, quando a temperatura costuma cair bastante na
-                    montanha.
+                    O Raiz &amp; Riso é uma experiência outdoor. Isso significa estar em contato
+                    direto com a paisagem viva dos Marins: terreno íngreme e acidentado, plantas,
+                    insetos, terra, vento, sol, frio, umidade e vida selvagem fazem parte do
+                    encontro.
                   </p>
                 </div>
               </div>
@@ -405,23 +399,18 @@ function RaizERiso() {
               <div className="grid gap-6 sm:grid-cols-[auto_1fr] items-start">
                 <Stamp Icon={Footprints} />
                 <div>
-                  <h3
-                    className="font-serif text-2xl"
-                    style={{ color: "var(--rr-moss)" }}
-                  >
-                    Movimento e contato com a terra.
+                  <h3 className="font-serif text-2xl" style={{ color: "var(--rr-moss)" }}>
+                    Abra-se para o imprevisível.
                   </h3>
                   <p
                     className="mt-3 text-[15px] leading-[1.8]"
                     style={{ color: "var(--rr-leather)" }}
                   >
-                    O Raiz &amp; Riso acontece em meio à natureza e envolve
-                    movimento e contato com a terra. A ideia não é
-                    “se arrumar”, mas vestir roupas que permitam explorar,
-                    perceber e viver o encontro com conforto, liberdade e
-                    presença. Pense em peças funcionais, naturais e acolhedoras
-                    — como uma exploradora da montanha em um fim de semana de
-                    descanso e descoberta. Uma mochilinha pequena cai bem.
+                    A vivência é conduzida com cuidado, orientação e respeito aos ritmos do grupo,
+                    mas é importante vir com abertura para sujar os pés, suar, sentir o corpo, lidar
+                    com pequenas imprevisibilidades da natureza e se permitir estar fora do controle
+                    habitual. Você pode esperar momentos de diversão, descontração e acolhimento,
+                    mas também tempo para pausa, silêncio, reflexão individual e partilha em grupo.
                   </p>
                 </div>
               </div>
@@ -429,23 +418,25 @@ function RaizERiso() {
               <div className="grid gap-6 sm:grid-cols-[auto_1fr] items-start">
                 <Stamp Icon={Coffee} />
                 <div>
-                  <h3
-                    className="font-serif text-2xl"
-                    style={{ color: "var(--rr-moss)" }}
-                  >
-                    Se puder, traga uma troca de roupa.
+                  <h3 className="font-serif text-2xl" style={{ color: "var(--rr-moss)" }}>
+                    O tempo pode mudar rápido por aqui.
                   </h3>
                   <p
                     className="mt-3 text-[15px] leading-[1.8]"
                     style={{ color: "var(--rr-leather)" }}
                   >
-                    Depois da caminhada, do plantio e das atividades na terra,
-                    trocar de roupa pode ser uma forma deliciosa de marcar a
-                    transição do movimento para o descanso. Uma roupa limpa,
-                    confortável e quentinha no fim do dia faz toda diferença.
+                    O clima na região pode variar bastante: é comum termos temperaturas amenas a
+                    frias, sol intenso, vento forte e também mudanças rápidas no tempo, com
+                    possibilidade de neblina, chuva, queda de visibilidade e sensação térmica mais
+                    baixa.
                   </p>
                 </div>
               </div>
+
+              <p className="mt-4 text-[15px] leading-[1.8]" style={{ color: "var(--rr-leather)" }}>
+                Venha preparada para caminhar, observar, respirar, rir, relaxar e se deixar
+                atravessar pela paisagem.
+              </p>
 
               <blockquote
                 className="mt-8 border-l-2 pl-6 font-serif italic text-2xl sm:text-3xl leading-[1.35]"
@@ -454,9 +445,8 @@ function RaizERiso() {
                   color: "var(--rr-moss)",
                 }}
               >
-                “O mais bonito acontece quando as pessoas começam a se parecer
-                menos com personagens e mais com elas mesmas — a autenticidade
-                vem sempre em primeiro lugar.”
+                “O mais bonito acontece quando as pessoas começam a se parecer menos com personagens
+                e mais com elas mesmas — a autenticidade vem sempre em primeiro lugar.”
               </blockquote>
             </div>
           </div>
@@ -497,10 +487,7 @@ function RaizERiso() {
         </section>
 
         {/* Inscrição */}
-        <section
-          id="inscricao"
-          className="scroll-mt-40 px-6 sm:px-10 pb-32 pt-4"
-        >
+        <section id="inscricao" className="scroll-mt-40 px-6 sm:px-10 pb-32 pt-4">
           <div className="mx-auto max-w-4xl text-center">
             <div className="rr-kicker">07 · inscrição</div>
             <h2
@@ -513,9 +500,9 @@ function RaizERiso() {
               className="mt-6 text-lg leading-relaxed max-w-xl mx-auto"
               style={{ color: "var(--rr-leather)" }}
             >
-              As vagas são poucas — feitas para preservar o clima íntimo do
-              encontro. Se a próxima data já estiver esgotada, entre na lista de
-              espera para ser avisado das próximas edições.
+              As vagas são poucas — feitas para preservar o clima íntimo do encontro. Se a próxima
+              data já estiver esgotada, entre na lista de espera para ser avisado das próximas
+              edições.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
