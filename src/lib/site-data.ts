@@ -7,10 +7,7 @@ export const site = {
   whatsappHref: "https://wa.me/5531998225916",
   instagram: "https://www.instagram.com/maschmoeller/",
   instagramHandle: "@maschmoeller",
-  // Domínio público atual (placeholder). Atualizar para o domínio definitivo
-  // assim que o domínio for registrado na Hostinger — junto com
-  // public/sitemap.xml, que usa o mesmo host em URLs absolutas.
-  url: "https://id-preview--0c39c4b9-d49a-4a23-ba0e-770a80094a80.lovable.app",
+  url: "https://clareiraexperiencias.com.br",
 };
 
 export type NavItem = {
