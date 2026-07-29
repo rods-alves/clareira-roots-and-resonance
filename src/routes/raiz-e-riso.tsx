@@ -337,14 +337,26 @@ function RaizERiso() {
                   style={{ color: "color-mix(in oklab, var(--rr-cream) 90%, transparent)" }}
                 >
                   <p>
-                    [bio editável] Marina vive nos Marins, cuida da terra que recebe o Raiz &amp;
-                    Riso e conduz as vivências com uma presença rara — dessas que só nascem de anos
-                    convivendo com a montanha.
+                    Marina Schmoeller, bióloga, mestre e doutora em Ecologia, moradora da Serra da
+                    Mantiqueira e criadora da Clareira. Sua trajetória reúne pesquisa científica,
+                    conservação da biodiversidade, restauração da natureza e educação ambiental. Mas
+                    sua relação com a natureza começou muito antes da vida profissional: Marina sobe
+                    montanhas e percorre trilhas desde criança, aprendendo a conhecer os lugares
+                    também pelo corpo, pelo ritmo da caminhada, pelo cansaço, pela atenção e pela
+                    presença.
                   </p>
                   <p>
-                    [bio editável] Seu olhar cruza hospitalidade, agroecologia e cuidado. É ela quem
-                    costura cada detalhe entre a floresta, a cozinha, o fogo e as pessoas que
-                    chegam.
+                    Há cerca de dez anos, pratica várias vertentes de yoga e meditação. Ao longo
+                    desse caminho, também se aventurou em atividades como circo, teatro, muay thai,
+                    esqui e corrida, movida pela curiosidade de experimentar novas formas de habitar
+                    o próprio corpo, ampliar a percepção e se relacionar com o mundo. É desse
+                    encontro entre conhecimento ecológico, experiência no território e investigação
+                    corporal que nasce sua forma de conduzir. No Raiz &amp; Riso, Marina cria
+                    contextos para que cada pessoa possa explorar a natureza com segurança e
+                    liberdade, alternando movimento e pausa, silêncio e conversa, reflexão e
+                    brincadeira. Aqui acreditamos que experimentar é mais importante do que
+                    desempenhar e que não há respostas prontas nem uma maneira certa de viver as
+                    experiências.
                   </p>
                 </div>
               </div>
