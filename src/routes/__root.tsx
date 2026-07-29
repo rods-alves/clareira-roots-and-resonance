@@ -35,6 +35,14 @@ gtag('consent', 'default', {
 });
 `;
 
+const GTM_SNIPPET = `
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NS3VFX2R');
+`;
+
 const ORGANIZATION_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -147,6 +155,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         {/* Must run before any other script (GA/Ads included, once installed). */}
         <script dangerouslySetInnerHTML={{ __html: CONSENT_MODE_DEFAULT_SNIPPET }} />
+        <script dangerouslySetInnerHTML={{ __html: GTM_SNIPPET }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSON_LD) }}
@@ -154,6 +163,12 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html:
+              '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS3VFX2R" height="0" width="0" style="display:none;visibility:hidden"></iframe>',
+          }}
+        />
         {children}
         <Scripts />
       </body>
