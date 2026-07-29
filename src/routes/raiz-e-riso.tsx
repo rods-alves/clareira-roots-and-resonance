@@ -44,8 +44,8 @@ const anchors = [
   { id: "quem-conduz", label: "Quem conduz" },
   { id: "clima", label: "O que esperar" },
   { id: "data", label: "Próxima data" },
-  { id: "faq", label: "Perguntas frequentes" },
   { id: "inscricao", label: "Inscrição" },
+  { id: "faq", label: "Perguntas frequentes" },
 ];
 
 const iconMap = {
@@ -500,11 +500,6 @@ function RaizERiso() {
           </div>
         </section>
 
-        {/* Perguntas frequentes */}
-        <section id="faq" className="scroll-mt-40 px-6 sm:px-10 py-20 sm:py-28">
-          <FAQ title="Perguntas frequentes" items={raizRisoFaq} />
-        </section>
-
         {/* Inscrição */}
         <section id="inscricao" className="scroll-mt-40 px-6 sm:px-10 pb-32 pt-4">
           <div className="mx-auto max-w-4xl text-center">
@@ -562,6 +557,11 @@ function RaizERiso() {
               <Trees className="h-4 w-4" style={{ color: "var(--rr-moss)" }} />
             </div>
           </div>
+        </section>
+
+        {/* Perguntas frequentes */}
+        <section id="faq" className="scroll-mt-40 px-6 sm:px-10 py-20 sm:py-28">
+          <FAQ title="Perguntas frequentes" items={raizRisoFaq} />
         </section>
 
         {/* Sticky mobile CTA */}
