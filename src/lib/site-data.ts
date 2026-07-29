@@ -2,11 +2,11 @@ export const site = {
   name: "Clareira",
   tagline: "experiências enraizadas no território",
   location: "Marins · Serra da Mantiqueira · Piquete-SP",
-  email: "ola@clareira.eco",
+  email: "contato@clareiraexperiencias.com.br",
   whatsapp: "+55 31 99822-5916",
   whatsappHref: "https://wa.me/5531998225916",
-  instagram: "https://instagram.com/clareira.eco",
-  instagramHandle: "@clareira.eco",
+  instagram: "https://www.instagram.com/maschmoeller/",
+  instagramHandle: "@maschmoeller",
   // Domínio público atual (preview do Lovable). Atualizar para o domínio
   // definitivo (Hostinger) quando o site sair do Lovable — junto com
   // public/sitemap.xml, que usa o mesmo host em URLs absolutas.

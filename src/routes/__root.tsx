@@ -36,16 +36,14 @@ gtag('consent', 'default', {
 });
 `;
 
-// Organization JSON-LD — partial on purpose. Omits `email` and `sameAs`
-// (Instagram): both are still placeholders in site-data.ts, and publishing
-// fake contact info in structured data is exactly the kind of thing that gets
-// indexed and quoted back at people. Add them here once real values exist.
 const ORGANIZATION_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: site.name,
   url: site.url,
   logo: `${site.url}${clareiraSimbolo}`,
+  email: site.email,
+  sameAs: [site.instagram],
   description:
     "Projeto regenerativo na Serra da Mantiqueira, nos Marins (Piquete-SP), com experiências, estadias e saberes que aproximam pessoas da natureza e do território.",
   contactPoint: {
