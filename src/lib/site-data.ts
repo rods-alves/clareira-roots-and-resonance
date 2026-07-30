@@ -193,3 +193,51 @@ export const raizRisoFaq: { question: string; answer: string }[] = [
       "Nas inscrições realizadas pela internet ou por outro meio não presencial, o participante poderá exercer o direito de arrependimento no prazo de sete dias corridos após a contratação, com reembolso integral do valor pago, desde que o pedido seja comunicado antes do início da vivência. Esse direito prevalece sobre os demais prazos da política de cancelamento.\nApós o encerramento desse prazo, serão aplicadas as seguintes condições:\n• Com dez dias ou mais de antecedência: reembolso integral;\n• Entre cinco e nove dias de antecedência: reembolso de 80% do valor pago;\n• Com menos de cinco dias de antecedência: reembolso de 50% do valor pago;\n• Nas últimas 24 horas antes do evento ou em caso de não comparecimento sem aviso: não haverá reembolso, pois, nessa etapa, alimentos, materiais, brindes e serviços relacionados à participação já terão sido contratados ou adquiridos.\nA inscrição poderá ser transferida para outra pessoa sem custo, preferencialmente mediante comunicação à organização com pelo menos 24 horas de antecedência e envio dos dados do novo participante. Solicitações feitas após esse prazo serão avaliadas conforme a possibilidade operacional.\nCaso a vaga cancelada seja preenchida por outra pessoa, o valor eventualmente retido será devolvido ao participante que solicitou o cancelamento.\nPara solicitar cancelamento ou substituição, entre em contato pelos canais informados na confirmação da inscrição.",
   },
 ];
+
+export const homeFaq: { question: string; answer: string }[] = [
+  {
+    question: "O que é a Clareira?",
+    answer:
+      "Clareira é um projeto de experiências enraizadas no território dos Marins, na Serra da Mantiqueira, em Piquete-SP. Reunimos vivências na natureza, curadorias e, em breve, estadias e conteúdos digitais, sempre a partir de uma prática de regeneração, presença e conexão com o lugar.",
+  },
+  {
+    question: "Onde fica a Clareira?",
+    answer:
+      "A Clareira está localizada nos Marins, distrito de Piquete, interior de São Paulo, na Serra da Mantiqueira, próximo ao Pico dos Marins e à divisa com Minas Gerais.",
+  },
+  {
+    question: "O que é turismo regenerativo e como a Clareira pratica isso?",
+    answer:
+      "Turismo regenerativo é uma forma de viajar que busca deixar o lugar visitado melhor do que encontrou, cuidando do solo, da água e das comunidades locais, em vez de apenas reduzir impactos.\nNa Clareira, isso significa escutar o território antes de intervir, trabalhar em rede com moradores e agricultores da região e seguir o ritmo próprio da natureza em cada vivência que oferecemos.",
+  },
+  {
+    question: "Quais experiências a Clareira oferece atualmente?",
+    answer:
+      "Hoje a principal vivência em funcionamento é o Raiz & Riso, uma imersão de 4 a 5 horas nos sítios Guetahe e Nawera. Em breve chegam outras frentes: Mato Adentro (trilhas e imersões guiadas), Estadias, Saberes digitais e Território local — uma curadoria de negócios da região.",
+  },
+  {
+    question: "O que é o Raiz & Riso?",
+    answer:
+      "Raiz & Riso é a vivência de um dia da Clareira, com 4 a 5 horas de caminhadas, pausas sensoriais, café da manhã com produtos locais e conversas sobre ecologia e regeneração, sempre em pequenos grupos. Acontece nos sítios Guetahe e Nawera, nos Marins, Piquete-SP.",
+  },
+  {
+    question: "Preciso ter experiência com trilhas ou bom condicionamento físico para participar?",
+    answer:
+      "Não. O Raiz & Riso foi criado para pessoas com pouca ou nenhuma experiência em vivências ao ar livre, sem exigir condicionamento físico elevado — apenas a capacidade de caminhar e realizar exercícios leves sem auxílio.\nQuem tem alguma restrição de mobilidade pode entrar em contato antes da inscrição para avaliarmos juntos a melhor forma de participar.",
+  },
+  {
+    question: "A Clareira tem opções de hospedagem?",
+    answer:
+      "As estadias próprias da Clareira ainda estão em preparação. Enquanto isso, indicamos parceiros de hospedagem na região dos Marins para quem quiser passar a noite e aproveitar a viagem com mais calma.",
+  },
+  {
+    question: "Como faço para participar de uma vivência ou saber das próximas datas?",
+    answer:
+      "Basta acessar a página do Raiz & Riso e se inscrever pelo WhatsApp, ou entrar na lista VIP para ser avisado(a) em primeira mão sobre a próxima edição. Também é possível acompanhar novidades pela newsletter e pelo Instagram da Clareira.",
+  },
+  {
+    question: "A Clareira atende grupos, empresas ou experiências personalizadas?",
+    answer:
+      "Sim. Além das vivências abertas ao público, a Clareira também monta experiências personalizadas para grupos, empresas e ocasiões específicas. É só entrar em contato para conversar sobre o que você tem em mente.",
+  },
+];

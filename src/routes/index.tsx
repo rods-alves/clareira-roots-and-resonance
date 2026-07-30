@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
+import { FAQ } from "@/components/site/FAQ";
 import picoMarins from "@/assets/pico-marins.jpeg";
 import logoStacked from "@/assets/clareira-logo-vertical.svg";
 import raizERisoEvento from "@/assets/raiz-e-riso-evento.jpg";
-import { emBreve, manifesto, site } from "@/lib/site-data";
+import { emBreve, homeFaq, manifesto, site } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -214,6 +215,11 @@ function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Perguntas frequentes */}
+      <section id="faq" className="scroll-mt-40 px-6 sm:px-10 py-20 sm:py-28">
+        <FAQ title="Perguntas frequentes" items={homeFaq} />
       </section>
     </PageShell>
   );
