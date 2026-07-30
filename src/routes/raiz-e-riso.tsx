@@ -20,6 +20,7 @@ import { raizRiso, raizRisoFaq } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 import { trackWhatsAppLead } from "@/lib/analytics";
 import rrBadge from "@/assets/raiz-riso-badge.jpg";
+import raizRisoLogo from "@/assets/raiz-riso-logo.png";
 import raizERisoEvento from "@/assets/raiz-e-riso-evento.jpg";
 import marina3 from "@/assets/marina-3.jpg";
 import marina4 from "@/assets/marina-4.jpg";
@@ -137,7 +138,7 @@ function RaizERiso() {
         <section className="pt-24 pb-20 sm:pt-32 sm:pb-28 px-6 sm:px-10">
           <div className="mx-auto max-w-4xl text-center">
             <img
-              src={rrBadge}
+              src={raizRisoLogo}
               alt="Selo Raiz & Riso — Marins, Piquete-SP"
               className="mx-auto w-56 sm:w-72 md:w-80"
               style={{ filter: "drop-shadow(0 8px 24px rgba(74,93,58,0.18))" }}
