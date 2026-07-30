@@ -24,82 +24,84 @@ export function Header() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-background/85 backdrop-blur-md border-b border-border/60"
-          : "bg-[color:var(--forest)]/35 backdrop-blur-sm"
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
-        <Link to="/" className="flex items-center gap-3 min-w-0" onClick={() => setOpen(false)}>
-          <img
-            src={logoHorizontal}
-            alt={site.name}
-            className="h-11 sm:h-12 w-auto shrink-0 object-contain"
-            style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.35))" }}
-            decoding="async"
-          />
-        </Link>
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div
+        className={`transition-all duration-500 ${
+          scrolled
+            ? "bg-background/85 backdrop-blur-md border-b border-border/60"
+            : "bg-[color:var(--forest)]/35 backdrop-blur-sm"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
+          <Link to="/" className="flex items-center gap-3 min-w-0" onClick={() => setOpen(false)}>
+            <img
+              src={logoHorizontal}
+              alt={site.name}
+              className="h-11 sm:h-12 w-auto shrink-0 object-contain"
+              style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.35))" }}
+              decoding="async"
+            />
+          </Link>
 
-        <nav
-          className={`hidden lg:flex items-center gap-1 ${
-            scrolled ? "" : "text-[color:var(--cream)]"
-          }`}
-          style={scrolled ? undefined : { textShadow: "0 1px 3px rgba(0,0,0,0.45)" }}
-        >
-          {nav.map((item) => (
-            <div key={item.label} className="relative group">
-              <Link
-                to={item.to}
-                className={`inline-flex items-center gap-1 px-3 py-2 text-sm transition-colors ${
-                  scrolled
-                    ? "text-primary/80 hover:text-primary"
-                    : "text-[color:var(--cream)] hover:text-white"
-                }`}
-                activeProps={{ className: "font-medium" }}
-                activeOptions={{ exact: item.to === "/" }}
-                aria-haspopup={item.children ? "menu" : undefined}
-              >
-                {item.label}
-                {item.children && <ChevronDown className="h-3.5 w-3.5 opacity-60" />}
-              </Link>
-              {item.children && (
-                <div
-                  role="menu"
-                  className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200"
+          <nav
+            className={`hidden lg:flex items-center gap-1 ${
+              scrolled ? "" : "text-[color:var(--cream)]"
+            }`}
+            style={scrolled ? undefined : { textShadow: "0 1px 3px rgba(0,0,0,0.45)" }}
+          >
+            {nav.map((item) => (
+              <div key={item.label} className="relative group">
+                <Link
+                  to={item.to}
+                  className={`inline-flex items-center gap-1 px-3 py-2 text-sm transition-colors ${
+                    scrolled
+                      ? "text-primary/80 hover:text-primary"
+                      : "text-[color:var(--cream)] hover:text-white"
+                  }`}
+                  activeProps={{ className: "font-medium" }}
+                  activeOptions={{ exact: item.to === "/" }}
+                  aria-haspopup={item.children ? "menu" : undefined}
                 >
-                  <div className="min-w-[220px] rounded-md border border-border bg-background/95 backdrop-blur-md shadow-lg py-2">
-                    {item.children.map((c) => (
-                      <Link
-                        key={c.label}
-                        to={c.to}
-                        hash={c.hash}
-                        role="menuitem"
-                        className="block px-4 py-2 text-sm text-primary/80 hover:text-primary hover:bg-secondary/60 focus-visible:bg-secondary/60 focus-visible:outline-none transition-colors"
-                      >
-                        {c.label}
-                      </Link>
-                    ))}
+                  {item.label}
+                  {item.children && <ChevronDown className="h-3.5 w-3.5 opacity-60" />}
+                </Link>
+                {item.children && (
+                  <div
+                    role="menu"
+                    className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 absolute left-0 top-full pt-2 transition-all duration-200"
+                  >
+                    <div className="min-w-[220px] rounded-md border border-border bg-background/95 backdrop-blur-md shadow-lg py-2">
+                      {item.children.map((c) => (
+                        <Link
+                          key={c.label}
+                          to={c.to}
+                          hash={c.hash}
+                          role="menuitem"
+                          className="block px-4 py-2 text-sm text-primary/80 hover:text-primary hover:bg-secondary/60 focus-visible:bg-secondary/60 focus-visible:outline-none transition-colors"
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
+                )}
+              </div>
+            ))}
+          </nav>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className={`lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
-            scrolled ? "border-border text-primary" : "border-white/40 text-[color:var(--cream)]"
-          }`}
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className={`lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
+              scrolled ? "border-border text-primary" : "border-white/40 text-[color:var(--cream)]"
+            }`}
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
