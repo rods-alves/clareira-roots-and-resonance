@@ -63,7 +63,7 @@ function HomePage() {
 
           <div className="mt-14 flex items-center gap-6 text-[color:var(--cream)]/80 text-xs uppercase tracking-[0.28em]">
             <span className="h-px w-16 bg-[color:var(--sand)]" />
-            role scroll para conhecer
+            role para conhecer
           </div>
         </div>
       </section>
