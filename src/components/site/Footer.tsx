@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Mail, MessageCircle } from "lucide-react";
-import logoSymbol from "@/assets/logo-symbol.jpeg";
+import logoSymbol from "@/assets/clareira-simbolo-selo.png";
 import { nav, site } from "@/lib/site-data";
 import { setBannerOpen } from "@/lib/cookieConsent";
 import { trackWhatsAppLead } from "@/lib/analytics";
@@ -28,7 +28,7 @@ export function Footer() {
               />
               <div className="leading-tight">
                 <div className="font-serif text-2xl">{site.name}</div>
-                <div className="text-[11px] uppercase tracking-[0.24em] text-[color:var(--sand)]">
+                <div className="text-[9px] uppercase tracking-[0.24em] text-[color:var(--sand)]">
                   {site.tagline}
                 </div>
               </div>
