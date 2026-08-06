@@ -3,7 +3,7 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { FAQ } from "@/components/site/FAQ";
 import picoMarins from "@/assets/pico-marins.jpeg";
-import logoSelo from "@/assets/clareira-logo-selo.jpg";
+import logoHero from "@/assets/clareira-logo-hero.png";
 import raizERisoEvento from "@/assets/raiz-e-riso-evento.jpg";
 import { emBreve, homeFaq, manifesto, site } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
@@ -42,7 +42,7 @@ function HomePage() {
         <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 pt-24 sm:pt-28">
           <div className="max-w-2xl">
             <img
-              src={logoSelo}
+              src={logoHero}
               alt="Clareira — experiências enraizadas no território"
               className="w-40 sm:w-52 md:w-60"
             />
