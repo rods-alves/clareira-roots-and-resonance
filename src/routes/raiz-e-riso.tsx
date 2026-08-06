@@ -22,7 +22,6 @@ import { trackWhatsAppLead } from "@/lib/analytics";
 import rrBadge from "@/assets/raiz-riso-badge.jpg";
 import raizRisoLogo from "@/assets/raiz-riso-logo.png";
 import raizERisoEvento from "@/assets/raiz-e-riso-evento.jpg";
-import marina4 from "@/assets/marina-4.jpg";
 import marina8 from "@/assets/marina-8.jpg";
 import paraQuem1 from "@/assets/raiz-riso-para-quem-1.jpg";
 import paraQuem2 from "@/assets/raiz-riso-para-quem-2.jpg";
@@ -391,16 +390,6 @@ function RaizERiso() {
                   </p>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-12 relative aspect-[16/9] overflow-hidden rounded-sm">
-              <img
-                src={marina4}
-                alt="Vista da Serra da Mantiqueira a partir do território"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
             </div>
           </div>
         </section>
