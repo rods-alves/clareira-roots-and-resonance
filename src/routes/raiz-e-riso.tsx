@@ -22,8 +22,11 @@ import { trackWhatsAppLead } from "@/lib/analytics";
 import rrBadge from "@/assets/raiz-riso-badge.jpg";
 import raizRisoLogo from "@/assets/raiz-riso-logo.png";
 import raizERisoEvento from "@/assets/raiz-e-riso-evento.jpg";
-import marina3 from "@/assets/marina-3.jpg";
 import marina4 from "@/assets/marina-4.jpg";
+import marina8 from "@/assets/marina-8.jpg";
+import paraQuem1 from "@/assets/raiz-riso-para-quem-1.jpg";
+import paraQuem2 from "@/assets/raiz-riso-para-quem-2.jpg";
+import paraQuem3 from "@/assets/raiz-riso-para-quem-3.jpg";
 
 export const Route = createFileRoute("/raiz-e-riso")({
   head: () =>
@@ -166,7 +169,7 @@ function RaizERiso() {
         <section id="sobre" className="scroll-mt-40 px-6 sm:px-10 py-20 sm:py-28">
           <div className="mx-auto max-w-6xl grid gap-14 md:grid-cols-2 md:gap-20 items-center">
             <div className="order-2 md:order-1">
-              <div className="rr-kicker">01 · o que é</div>
+              <div className="rr-kicker">01 · o que é Raiz & Riso</div>
               <h2
                 className="mt-4 font-serif text-4xl sm:text-5xl md:text-6xl leading-[1.05]"
                 style={{ color: "var(--rr-moss)" }}
@@ -178,18 +181,26 @@ function RaizERiso() {
                 style={{ color: "color-mix(in oklab, var(--rr-moss) 85%, black)" }}
               >
                 <p>
-                  Raiz &amp; Riso é uma vivência de poucos dias, feita para reaproximar corpo,
-                  floresta e presença. Acontece nos Sítios Guetahe e Nawera, na Serra da
-                  Mantiqueira, entre araucárias, café coado, terra fresca e o silêncio das manhãs da
-                  montanha.
+                  O Raiz &amp; Riso é uma vivência de quatro a cinco horas, em grupo pequeno, para
+                  experimentar um ritmo diferente de estar no mundo: com mais presença no corpo,
+                  atenção ao território e espaço para respirar.
                 </p>
                 <p>
-                  Não é retiro, não é curso, não é workshop. É um encontro pequeno — de gente
-                  atenta, refeições generosas, caminhadas sem pressa e conversas que só nascem longe
-                  das telas.
+                  O encontro acontece nos Sítios Guetahe e Nawera, em Piquete, na Serra da
+                  Mantiqueira, entre araucárias, manacás e trechos de Mata Atlântica de altitude. A
+                  manhã é atravessada por movimento consciente, escrita, caminhadas sem pressa,
+                  experiências com a terra, brincadeiras e um café da manhã generoso, preparado a
+                  partir da curadoria de produtos locais e regionais.
                 </p>
-                <p className="font-serif italic text-xl">
-                  Aqui, a proposta é uma só: explorar, perceber, sentir.
+                <p>
+                  Não é preciso ter experiência com yoga, meditação, trilhas ou vida na roça. Cada
+                  pessoa participa respeitando seu corpo, seu ritmo e seus limites.
+                </p>
+                <p>
+                  Mais do que cumprir uma programação, o convite é perceber: o gosto da comida, a
+                  temperatura da água, o chão sob os pés, a própria respiração e a presença de quem
+                  caminha ao lado. Um encontro para sair um pouco do automático, aguçar os sentidos
+                  e cultivar outras formas de se relacionar consigo, com os outros e com o lugar.
                 </p>
               </div>
 
@@ -246,6 +257,23 @@ function RaizERiso() {
             >
               {raizRiso.paraQuem.map((p, i) => (
                 <p key={i}>{p}</p>
+              ))}
+            </div>
+
+            <div className="mt-10 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
+              {[paraQuem1, paraQuem2, paraQuem3].map((img, i) => (
+                <div
+                  key={i}
+                  className="relative aspect-[3/4] w-[75%] shrink-0 snap-center overflow-hidden rounded-sm sm:w-auto sm:shrink"
+                >
+                  <img
+                    src={img}
+                    alt="Participantes do Raiz & Riso no território"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -320,7 +348,7 @@ function RaizERiso() {
             <div className="mt-14 grid gap-12 md:grid-cols-[1.1fr_1fr] items-center">
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
                 <img
-                  src={marina3}
+                  src={marina8}
                   alt="Marina, anfitriã do Raiz & Riso"
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"

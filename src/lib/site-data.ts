@@ -160,7 +160,7 @@ export const raizRisoFaq: { question: string; answer: string }[] = [
   {
     question: "Como chegar?",
     answer:
-      "Os sítios estão localizados próximos à divisa entre os estados de São Paulo e Minas Gerais. O principal acesso é feito por Piquete, em São Paulo.\nPela Rodovia Presidente Dutra — BR-116 —, siga até Lorena e pegue a saída em direção a Piquete e ao sul de Minas Gerais, pela BR-459. Após passar pelo portal de Piquete, siga até a bifurcação e entre à esquerda na Estrada Vicinal José Rodrigues Ferreira, que dá acesso à Vila dos Marins.\nDepois da vila, pegue a subida à esquerda na bifurcação e percorra aproximadamente quatro quilômetros por estrada de terra até os sítios.\nOs participantes receberão orientações mais detalhadas, localização, mapas e pontos de referência antes do evento.",
+      "Os sítios estão localizados próximos à divisa entre os estados de São Paulo e Minas Gerais. O principal acesso é feito por Piquete, em São Paulo.\nPela Rodovia Presidente Dutra — BR-116 —, siga até Lorena e pegue a saída em direção a Piquete e ao sul de Minas Gerais, pela BR-459 até a bifurcação para a Estrada Vicinal José Rodrigues Ferreira, que dá acesso à Vila dos Marins. Depois da vila são aproximadamente quatro quilômetros por estrada de terra até os sítios.\nOs participantes receberão orientações mais detalhadas, localização, mapas e pontos de referência antes do evento.",
   },
   {
     question: "Com que frequência o Raiz & Riso acontece?",
