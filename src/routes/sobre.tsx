@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import picoMarins from "@/assets/pico-marins.jpeg";
-import marina2 from "@/assets/marina-2.jpg";
 import marina3 from "@/assets/marina-3.jpg";
-import marina4 from "@/assets/marina-4.jpg";
+import marina5 from "@/assets/marina-5.jpg";
+import marina6 from "@/assets/marina-6.jpg";
+import marina7 from "@/assets/marina-7.jpg";
 import { manifesto, regeneracao } from "@/lib/site-data";
 import { seoHead } from "@/lib/seo";
 
@@ -190,7 +191,7 @@ function SobrePage() {
             </div>
 
             <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {[marina2, marina4].map((img, i) => (
+              {[marina5, marina6, marina7].map((img, i) => (
                 <div key={i} className="relative aspect-square overflow-hidden rounded-sm">
                   <img
                     src={img}
@@ -201,11 +202,6 @@ function SobrePage() {
                   />
                 </div>
               ))}
-              <div className="hidden sm:flex items-center justify-center bg-[color:var(--forest)] border border-[color:var(--olive)]/30 rounded-sm p-6 text-center">
-                <p className="font-serif italic text-lg text-[color:var(--sand)]">
-                  “o território ensina, se a gente aceitar ser aluno.”
-                </p>
-              </div>
             </div>
 
             <div className="mt-16 text-sm">
